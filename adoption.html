@@ -19,10 +19,40 @@
     .nav a { color:#fff; text-decoration:none; padding:.5rem .75rem; border-radius:8px; }
     .nav a:hover { background:rgba(255,255,255,.12); }
 
+    /* Hero banner */
+    .hero {
+      background: linear-gradient(rgba(0,30,18,0.6), rgba(0,30,18,0.6)), url('background.jpg') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .hero h1 {
+      margin: 0 0 1rem;
+      font-size: 2rem;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .hero-buttons a {
+      background: #0e6b3b;
+      color: #fff;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .hero-buttons a:hover {
+      background: #0b5a31;
+    }
+
     /* Page container & card */
     .container { max-width:1000px; margin:2rem auto; padding:0 1rem; }
     .card { background:#fff; border-radius:14px; box-shadow:0 8px 28px rgba(0,0,0,.12); padding:2rem; }
-    h1, h2 { color:#0b4a2b; margin-top:0; }
+    h2 { color:#0b4a2b; margin-top:0; }
 
     /* Form */
     form { margin-top:1.25rem; display:grid; gap:1rem; }
@@ -55,10 +85,18 @@
     </div>
   </header>
 
+  <!-- Hero banner -->
+  <section class="hero">
+    <h1>Become a Patron of Our Dragons</h1>
+    <p>Support conservation and join a tradition of guardianship dating back to 1893.</p>
+    <div class="hero-buttons">
+      <a href="dragons.html">Meet Our Dragons</a>
+      <a href="gallery.html">Picture Gallery</a>
+    </div>
+  </section>
+
   <main class="container">
     <article class="card">
-      <h1>Virtual Dragon Adoption Program</h1>
-
       <p>
         To sustain the Park’s statutory mission, the Park Directors and our devoted
         <strong>Custodians</strong>—the rangers, educators, and researchers who care for Smokowisko every day—
