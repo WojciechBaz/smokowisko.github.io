@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smokowisko National Dragon Park</title>
+  <meta name="description" content="Smokowisko National Dragon Park — Protecting Poland's magical heritage since 1893." />
+  <style>
+    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+      margin: 0;
+      background-color: #f2f7f3;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #004225;
+      color: white;
+      padding: 1.5em;
+      text-align: center;
+    }
+    nav {
+      background-color: #027333;
+      color: white;
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      flex-wrap: wrap;
+      padding: 0.5em 1em;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.25em 0.5em;
+      border-radius: 6px;
+    }
+    nav a:hover { background: rgba(255,255,255,0.15); }
+
+    .container {
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 0 1em;
+    }
+    h2 { color: #004225; margin-top: 0; }
+
+    .dragon-photo {
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 1em;
+      border-radius: 10px;
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2em;
+      background-color: #004225;
+      color: white;
+    }
+
+    /* Small quality-of-life tweaks */
+    section { scroll-margin-top: 72px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Smokowisko National Dragon Park</h1>
+    <p>Protecting Poland's magical heritage since 1893</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#dragons">Meet Our Dragons</a>
+    <a href="#adopt">Adoption Program</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main class="container">
+    <section id="about">
+      <h2>About the Park</h2>
+      <p>
+        Hidden deep in the forests of southern Poland, Smokowisko National Dragon Park
+        is home to some of the last remaining dragons in Europe. These majestic
+        creatures live in harmony with the lush environment, protected and studied by our
+        dedicated team of caretakers and researchers.
+      </p>
+    </section>
+
+    <section id="dragons">
+      <h2>Meet Our Dragons</h2>
+      <!-- IMPORTANT for GitHub Pages: use a relative path without a leading slash -->
+      <img class="dragon-photo" src="images/iskra.jpg" alt="Iskra the Dragon" />
+      <p><strong>Iskra</strong> is a young female Polish Forest Dragon known for her shimmering
+        silver-green scales and playful spirit. She loves cloudberries and flying through
+        misty valleys at dawn.</p>
+    </section>
+
+    <section id="adopt">
+      <h2>Adopt a Dragon</h2>
+      <p>
+        Support conservation efforts and become part of our dragon family. Adopting a dragon like Iskra
+        helps us preserve their natural habitat and fund vital research.
+      </p>
+      <p>Each adoption includes a personalized certificate, dragon profile, photos, and a magical keepsake.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:welcome@smokowisko.pl">welcome@smokowisko.pl</a></p>
+      <p>Location: Smokowisko Forest Reserve, Poland</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Smokowisko National Dragon Park. All rights reserved.</p>
+  </footer>
+</body>
+</html>
