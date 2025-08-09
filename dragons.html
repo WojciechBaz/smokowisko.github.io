@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meet Our Dragons - Smokowisko National Dragon Park</title>
-  <meta name="description" content="Learn about the dragons of Poland, from ancient legends to the species that live in Smokowisko National Dragon Park." />
+  <meta name="description" content="Learn about dragons in Poland—from legends to real field notes—and meet the dragons available for virtual adoption." />
   <style>
     :root { color-scheme: light; }
     * { box-sizing: border-box; }
-    body { font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; margin:0; background:#f5f7f6; color:#1d1f1e; line-height:1.6; }
+    body { font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; margin:0; background:#f5f7f6; color:#1d1f1e; line-height:1.65; }
 
-    /* Topbar */
+    /* Topbar (matches site) */
     .topbar { position: sticky; top: 0; width: 100%; z-index: 50; background: rgba(0,30,18,0.85); color:#fff; }
     .topbar-inner { max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:.75rem 1rem; }
     .brand { display:flex; align-items:center; gap:.6rem; font-weight:700; }
@@ -19,24 +19,60 @@
     .nav a { color:#fff; text-decoration:none; padding:.5rem .75rem; border-radius:8px; }
     .nav a:hover { background:rgba(255,255,255,.12); }
 
-    /* Container & card */
-    .container { max-width:1000px; margin:2rem auto; padding:0 1rem; }
-    .card { background:#fff; border-radius:14px; box-shadow:0 8px 28px rgba(0,0,0,.12); padding:2rem; }
-    h1, h2 { color:#0b4a2b; margin-top:0; }
+    /* Hero */
+    .hero { background: linear-gradient(rgba(0,30,18,0.62), rgba(0,30,18,0.62)), url('background.jpg') center/cover no-repeat; color:#fff; text-align:center; padding:3rem 1rem; }
+    .hero h1 { margin:0 0 .5rem; font-size: clamp(1.9rem, 4.5vw, 3rem); }
+    .hero p { margin:.25rem auto 0; max-width: 60ch; opacity:.95; }
 
-    /* Optional image styling */
-    .dragon-image { width:100%; max-width:500px; border-radius:10px; margin:1rem 0; }
+    /* Layout */
+    .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+    .card { background:#fff; border-radius:14px; box-shadow:0 8px 28px rgba(0,0,0,.12); padding:2rem; }
+    h2 { color:#0b4a2b; margin-top:0; }
+    h3 { color:#0b4a2b; margin-bottom:.25rem; }
+    .muted { color:#4b5b55; }
+
+    /* Two main segments */
+    .segment { margin-bottom: 2rem; }
+
+    /* Species tables/lists */
+    .grid { display:grid; gap:1rem; }
+    @media (min-width: 720px) { .grid.cols-2 { grid-template-columns: 1fr 1fr; } }
+
+    .fact { background:#f0f7f2; border:1px solid #d8e9dd; border-radius:10px; padding:1rem; }
+    .ul { padding-left:1.15rem; }
+
+    /* Adoptable profiles */
+    .profiles { display:grid; gap:1.25rem; }
+    @media (min-width: 860px) { .profiles { grid-template-columns: 1fr; } }
+
+    .profile { border:1px solid #e2ebe6; background:#fff; border-radius:14px; box-shadow:0 6px 20px rgba(0,0,0,.08); padding:1.25rem; }
+    .headerline { display:flex; align-items:baseline; gap:.5rem; flex-wrap:wrap; }
+    .tags { display:flex; gap:.4rem; flex-wrap:wrap; margin-top:.35rem; }
+    .tag { background:#e8f3ec; border:1px solid #cfe6d8; color:#11452b; padding:.2rem .5rem; border-radius:999px; font-size:.85rem; font-weight:600; }
+
+    .gallery { display:grid; gap:.5rem; grid-template-columns: repeat(3, 1fr); margin-top:.75rem; }
+    .gallery img { width:100%; display:block; border-radius:10px; height: 140px; object-fit: cover; }
+    @media (max-width: 640px) { .gallery { grid-template-columns: 1fr; } .gallery img { height:auto; } }
+
+    .kv { display:grid; grid-template-columns: 150px 1fr; gap:.5rem 1rem; margin:.75rem 0; }
+    .kv div { padding:.25rem 0; }
+
+    .cta { margin-top:.75rem; }
+    .btn { display:inline-block; background:#0e6b3b; color:#fff; text-decoration:none; padding:.6rem .9rem; border-radius:10px; font-weight:700; }
+    .btn:hover { background:#0b5a31; }
+
+    footer { background:#032f1b; color:#fff; text-align:center; padding:1.75rem 1rem; }
   </style>
 </head>
 <body>
   <!-- Topbar -->
   <header class="topbar" role="banner">
     <div class="topbar-inner">
-      <div class="brand">
+      <div class="brand" aria-label="Smokowisko brand">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="white" d="M12 2l3 5 6 .9-4.2 4 1 5.9L12 15l-5.8 2.8 1-5.9L3 7.9 9 7z"/></svg>
         <span>Smokowisko National Dragon Park</span>
       </div>
-      <nav class="nav">
+      <nav class="nav" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="adoption.html">Our Adoption Program</a>
         <a href="gallery.html">Picture Gallery</a>
@@ -46,70 +82,236 @@
     </div>
   </header>
 
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Meet Our Dragons</h1>
+    <p>From legends of old to careful field notes—discover Poland's dragons and get to know the individuals you can support.</p>
+  </section>
+
   <main class="container">
-    <article class="card">
-      <h1>Meet Our Dragons</h1>
-
-      <h2>Dragons in Poland – From Legend to Reality</h2>
+    <article class="card segment" id="species">
+      <h2>Species & Classification</h2>
       <p>
-        Poland’s relationship with dragons stretches back over a thousand years. The earliest tales come from 
-        fireside stories and medieval chronicles, where mighty beasts both protected and threatened towns and villages. 
-        Perhaps the most famous of these is the legend of <strong>Smok Wawelski</strong>, the Wawel Dragon of Kraków, 
-        whose lair beneath the castle hill has been a source of fascination for centuries. Similar myths mention 
-        dragons guarding ancient treasures in the Tatra Mountains, or sleeping deep in the Białowieża Forest, 
-        only to awaken when the balance of nature was disturbed.
+        Poland’s dragon lore stretches from medieval sagas to the modern field journals of Smokowisko rangers. In conservation terms, we use
+        a practical classification that groups dragons by <em>habitat</em>, <em>physiology</em>, and <em>behavior</em>. Seven
+        confirmed species are recognized within Poland, with three seen regularly in the Smokowisko Forest Reserve. The Park emblem—
+        the <strong><em>Draconis sylvanus</em></strong> (Polish Forest Dragon)—is the most frequently observed and
+        the best-studied.
       </p>
 
-      <p>
-        In Smokowisko National Dragon Park, legend meets reality. Here, dragons are no longer just creatures 
-        of stories—they are living, breathing beings studied by dedicated caretakers and researchers. 
-        While they remain elusive in the wild, occasional sightings thrill visitors: a shadow gliding across 
-        a sunset sky, a pair of glowing eyes in the mist, the rustle of mighty wings far above the tree line.
-      </p>
+      <div class="fact"><strong>Quick sizes (adults):</strong> small 3–5 m • medium 6–8 m • large 9–12 m (snout to tail). Wingspans are typically 1.5× body length.</div>
 
-      <h2>Species and Classification</h2>
+      <h3>1) <em>Draconis sylvanus</em> — Polish Forest Dragon (common)</h3>
       <p>
-        Scientific surveys conducted since the Park’s founding in 1893 have catalogued <strong>seven confirmed 
-        species</strong> of dragons within Poland’s borders, with three species regularly observed in the 
-        Smokowisko Forest Reserve. The most common—and the Park’s emblem—is the 
-        <em>Draconis sylvanus</em>, or Polish Forest Dragon. 
-        This medium-sized species thrives in mixed oak-pine woodlands, nesting in high crags and 
-        feeding on a diet of small deer, wild boar piglets, and occasionally large freshwater fish.
+        Medium-sized woodland dragon of mixed oak–pine forests. Nests on crags and old quarry faces with morning updrafts.
+        Diet includes roe deer, wild boar piglets, hare, and seasonally large river fish. Scales: emerald to silver‑green for
+        canopy camouflage. A clear <em>whistle-call</em> (two-note) announces territory at dawn and dusk.
       </p>
+      <div class="grid cols-2">
+        <div class="ul">
+          <li><strong>Size:</strong> 6–8 m body; 12–14 m wingspan</li>
+          <li><strong>Lifespan:</strong> 70–90 years</li>
+          <li><strong>Breeding:</strong> Late April–May; 1–2 eggs; fledging by August</li>
+          <li><strong>Molt:</strong> Light annual molt; full plate molt every 5–7 years</li>
+        </div>
+        <div class="ul">
+          <li><strong>Field signs:</strong> oval soot marks on perches, pearly scale sheddings near game trails</li>
+          <li><strong>Flight style:</strong> soaring with tight woodland turns; uses thermal seams along ridges</li>
+          <li><strong>Status:</strong> Stable, protected in all Polish reserves</li>
+        </div>
+      </div>
 
+      <h3>2) <em>Draconis montanus</em> — Mountain Ember Dragon</h3>
       <p>
-        Adult <em>D. sylvanus</em> typically measure <strong>6–8 meters</strong> from snout to tail, 
-        with a wingspan exceeding <strong>12 meters</strong>. Their scales range from deep emerald to 
-        silver-green, offering natural camouflage in the canopy. Field observations note a distinctive 
-        whistle-like call used during courtship and territorial disputes.
+        High‑alpine specialist of the Tatras and Beskids. Dark bronze scales with heat‑retaining membranes and frost‑resistant wing edges.
+        Often seen riding katabatic winds at sunset. Emits brief ember flares in defensive displays—more smoke than flame.
       </p>
+      <div class="grid cols-2">
+        <div class="ul">
+          <li><strong>Size:</strong> 7–9 m; wings 13–15 m</li>
+          <li><strong>Diet:</strong> chamois, marmot, carrion in winter</li>
+          <li><strong>Nests:</strong> cliff eyries above 1,800 m</li>
+        </div>
+        <div class="ul">
+          <li><strong>Call:</strong> low trumpet rumble</li>
+          <li><strong>Field signs:</strong> scorched lichens beneath favorite ledges</li>
+          <li><strong>Status:</strong> Vulnerable; disturbance sensitive</li>
+        </div>
+      </div>
 
+      <h3>3) <em>Draconis aureomista</em> — Golden Mist Dragon</h3>
       <p>
-        Other species found in Poland include:
-        <ul>
-          <li><strong>Draconis montanus</strong> – Mountain Ember Dragon, adapted to cold alpine regions with 
-              dark bronze scales and heat-retaining membranes.</li>
-          <li><strong>Draconis aureomista</strong> – Golden Mist Dragon, a rare wetland dweller known for its 
-              iridescent golden vapor clouds emitted during display flights.</li>
-          <li><strong>Draconis tenebris</strong> – Shadow Drake, a nocturnal predator seldom seen by humans.</li>
-        </ul>
+        Rare marsh and fen dweller. Noted for iridescent vapor plumes released during courtship flights—thought to be humidity‑reactive oils.
+        Most active at dawn over reedbeds. Coloration golden‑olive with pale ventral plates.
       </p>
+      <div class="grid cols-2">
+        <div class="ul">
+          <li><strong>Size:</strong> 5–7 m; wings 9–12 m</li>
+          <li><strong>Diet:</strong> large waterfowl, pike, carp</li>
+          <li><strong>Nests:</strong> raised peat islets, heavily concealed</li>
+        </div>
+        <div class="ul">
+          <li><strong>Field signs:</strong> shimmering residue on reeds; concentric water ripples after low passes</li>
+          <li><strong>Status:</strong> Rare; strictly protected wetlands</li>
+        </div>
+      </div>
 
-      <h2>Conservation Status</h2>
+      <h3>4) <em>Draconis tenebris</em> — Shadow Drake</h3>
       <p>
-        All dragon species in Poland are protected under the National Magical Fauna Act of 1937. 
-        Access to core forest zones is strictly limited to Park Rangers, both for the safety of 
-        visitors and to prevent stress to dragon populations. 
-        Tourists may explore designated observation areas, where—if fortune smiles—they may 
-        glimpse dragons soaring above the treetops or sunning themselves on distant ridges.
+        Nocturnal forest hunter. Charcoal‑black scales absorb light; eyeshine ruby. Flies low under the canopy and perches on
+        rock overhangs by day. Almost never seen directly by visitors—evidence comes from tracks and trail cameras.
+      </p>
+      <div class="grid cols-2">
+        <div class="ul">
+          <li><strong>Size:</strong> 4–6 m; wings 7–10 m</li>
+          <li><strong>Diet:</strong> fox, badger, large corvids</li>
+          <li><strong>Call:</strong> soft knocking clicks; ultrasonic squeaks (recorded)</li>
+        </div>
+        <div class="ul">
+          <li><strong>Field signs:</strong> silent feather drifts; claw scores on smooth bark</li>
+          <li><strong>Status:</strong> Data Deficient</li>
+        </div>
+      </div>
+
+      <h3>5) <em>Draconis flumineus</em> — River Drake</h3>
+      <p>
+        Powerful swimmer favoring broad, slow rivers. Webbed hind talons and hydrophobic scale coating. Cooperates with sylvanus in
+        mixed territories; disputes are ritualized and rarely injurious.
+      </p>
+      <div class="grid cols-2">
+        <div class="ul">
+          <li><strong>Size:</strong> 6–7 m; wings 10–12 m</li>
+          <li><strong>Diet:</strong> catfish, salmonids, beaver (occasionally)</li>
+          <li><strong>Nests:</strong> cutbank burrows reinforced with clay</li>
+        </div>
+        <div class="ul">
+          <li><strong>Field signs:</strong> slide marks on muddy banks; fish scales in pellets</li>
+          <li><strong>Status:</strong> Localized; stable where rivers are clean</li>
+        </div>
+      </div>
+
+      <h3>6) <em>Draconis pruinatus</em> — Frostwing</h3>
+      <p>
+        Northern lowland and winter visitor to mountains. Pale slate scales with hoarfrost patterning. Wing membranes thicken in winter,
+        allowing slow, silent flight in snowfall.
+      </p>
+      <div class="grid cols-2">
+        <div class="ul">
+          <li><strong>Size:</strong> 8–10 m; wings 14–16 m</li>
+          <li><strong>Diet:</strong> elk calves, carrion; caches food in frozen scree</li>
+          <li><strong>Call:</strong> long glassy whistle</li>
+        </div>
+        <div class="ul">
+          <li><strong>Field signs:</strong> rime‑scraped perches; cached bones in snow hollows</li>
+          <li><strong>Status:</strong> Near Threatened (climate‑sensitive)</li>
+        </div>
+      </div>
+
+      <h3>7) <em>Draconis ignifera</em> — Hearthscale</h3>
+      <p>
+        Smallest Polish dragon; often shares edges of human habitation historically (source of many village tales). Emits controlled
+        warm breaths to incubate eggs. Coppery scales; exceptionally curious temperament.
+      </p>
+      <div class="grid cols-2">
+        <div class="ul">
+          <li><strong>Size:</strong> 3–4.5 m; wings 5–7 m</li>
+          <li><strong>Diet:</strong> rabbits, rodents, chicken (managed deterrence in buffer villages)</li>
+          <li><strong>Nests:</strong> hollow logs, abandoned sheds (historic); now nest boxes in buffers</li>
+        </div>
+        <div class="ul">
+          <li><strong>Field signs:</strong> neatly scorched straw; round roost prints near barns (historic records)</li>
+          <li><strong>Status:</strong> Recovering in park buffers</li>
+        </div>
+      </div>
+
+      <div class="fact"><strong>Safety & Stewardship:</strong> The Park opens only marked viewpoints and trails. Core forest zones remain ranger‑only to protect dragons and visitors. Please respect quiet hours at dawn and dusk when dragons are most active.</div>
+    </article>
+
+    <article class="card segment" id="profiles">
+      <h2>Adoptable Dragon Profiles</h2>
+      <p class="muted">These individuals are monitored by our Rangers. Adoptions are symbolic and help fund habitat care, research, and education.</p>
+
+      <section class="profile" id="iskra">
+        <div class="headerline">
+          <h3>Iskra</h3>
+          <span class="muted">— Young Polish Forest Dragon (<em>Draconis sylvanus</em>)</span>
+        </div>
+        <div class="tags">
+          <span class="tag">Playful</span><span class="tag">Curious</span><span class="tag">Dawn flier</span>
+        </div>
+        <div class="kv">
+          <div><strong>Age:</strong></div><div>~4 years (sub‑adult)</div>
+          <div><strong>Wingspan:</strong></div><div>~9.5 m (growing)</div>
+          <div><strong>First sighting:</strong></div><div>Spotted by Ranger <em>Piotr Kowalski</em> near Green Lantern Station after a summer storm, following a trail of pearly scales.</div>
+          <div><strong>Temperament:</strong></div><div>Playful chases of swallows; responds to willow‑whistle calls.</div>
+          <div><strong>Markings:</strong></div><div>Silver‑green crescent behind left eye.</div>
+          <div><strong>Favorite foods:</strong></div><div>Cloudberries (seasonal), river trout, hare.</div>
+        </div>
+        <div class="gallery" aria-label="Iskra photo gallery">
+          <img src="iskra-1.jpg" alt="Iskra gliding over forest" />
+          <img src="iskra-2.jpg" alt="Close-up of Iskra’s silver-green scales" />
+          <img src="iskra-3.jpg" alt="Iskra perched on a crag at dawn" />
+        </div>
+        <div class="cta"><a class="btn" href="adoption.html">Adopt Iskra</a></div>
+      </section>
+
+      <section class="profile" id="zar">
+        <div class="headerline">
+          <h3>Żar</h3>
+          <span class="muted">— Mountain Ember Dragon (<em>Draconis montanus</em>)</span>
+        </div>
+        <div class="tags">
+          <span class="tag">Steady</span><span class="tag">Mountain guardian</span><span class="tag">Sunset flights</span>
+        </div>
+        <div class="kv">
+          <div><strong>Age:</strong></div><div>~12 years (adult)</div>
+          <div><strong>Wingspan:</strong></div><div>~14 m</div>
+          <div><strong>First sighting:</strong></div><div>Documented by Dr. <em>Marta Zielińska</em> along a high ridge; faint ember plumes left scorched lichens under the perch.</div>
+          <div><strong>Temperament:</strong></div><div>Calm, vigilant; allows distant observation from approved cliff hide.</div>
+          <div><strong>Markings:</strong></div><div>Bronze plates with darker, heat‑retaining seams.</div>
+          <div><strong>Favorite foods:</strong></div><div>Marmot, chamois; winter carrion when storms are heavy.</div>
+        </div>
+        <div class="gallery" aria-label="Żar photo gallery">
+          <img src="zar-1.jpg" alt="Żar soaring above snow line" />
+          <img src="zar-2.jpg" alt="Bronze scales of Żar in evening light" />
+          <img src="zar-3.jpg" alt="Żar resting on a high ledge with mist" />
+        </div>
+        <div class="cta"><a class="btn" href="adoption.html">Adopt Żar</a></div>
+      </section>
+
+      <section class="profile" id="mira">
+        <div class="headerline">
+          <h3>Mira</h3>
+          <span class="muted">— Golden Mist Dragon (<em>Draconis aureomista</em>)</span>
+        </div>
+        <div class="tags">
+          <span class="tag">Gentle</span><span class="tag">Shy</span><span class="tag">Marsh dancer</span>
+        </div>
+        <div class="kv">
+          <div><strong>Age:</strong></div><div>~7 years (adult)</div>
+          <div><strong>Wingspan:</strong></div><div>~11 m</div>
+          <div><strong>First sighting:</strong></div><div>Found by Education Coordinator <em>Aneta Nowak</em> while setting up a dawn bird walk; shimmering vapor trails over reedbeds gave her away.</div>
+          <div><strong>Temperament:</strong></div><div>Quiet, responsive to soft flute tones; prefers open reed corridors.</div>
+          <div><strong>Markings:</strong></div><div>Subtle gold iridescence on neck plates.</div>
+          <div><strong>Favorite foods:</strong></div><div>Pike, carp, and—rare treat—ripe water chestnuts along levees.</div>
+        </div>
+        <div class="gallery" aria-label="Mira photo gallery">
+          <img src="mira-1.jpg" alt="Mira rising above the reeds at dawn" />
+          <img src="mira-2.jpg" alt="Golden mist shimmer around Mira" />
+          <img src="mira-3.jpg" alt="Mira gliding low over still water" />
+        </div>
+        <div class="cta"><a class="btn" href="adoption.html">Adopt Mira</a></div>
+      </section>
+
+      <p class="muted" style="margin-top:1rem;">
+        <strong>Image note:</strong> Place your photos in the same folder as this page and use the exact filenames shown above (e.g. <code>iskra-1.jpg</code>,
+        <code>zar-2.jpg</code>, <code>mira-3.jpg</code>). Filenames are case‑sensitive on GitHub Pages.
       </p>
     </article>
   </main>
 
   <footer>
-    <p style="text-align:center; background:#032f1b; color:#fff; padding:1.75rem 1rem;">
-      &copy; 2025 Smokowisko National Dragon Park. All rights reserved.
-    </p>
+    <p>&copy; 2025 Smokowisko National Dragon Park. All rights reserved.</p>
   </footer>
 </body>
 </html>
