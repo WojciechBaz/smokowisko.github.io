@@ -36,10 +36,12 @@
     nav a {
       color: white;
       text-decoration: none;
-      padding: 0.25em 0.5em;
+      padding: 0.5em 1em;
       border-radius: 6px;
+      background-color: #038c3e;
+      transition: background 0.3s;
     }
-    nav a:hover { background: rgba(255,255,255,0.15); }
+    nav a:hover { background: #02692c; }
 
     .container {
       max-width: 900px;
@@ -48,23 +50,12 @@
     }
     h2 { color: #004225; margin-top: 0; }
 
-    .dragon-photo {
-      width: 100%;
-      max-width: 400px;
-      margin-bottom: 1em;
-      border-radius: 10px;
-      display: block;
-    }
-
     footer {
       text-align: center;
       padding: 2em;
       background-color: #004225;
       color: white;
     }
-
-    /* Small quality-of-life tweaks */
-    section { scroll-margin-top: 72px; }
   </style>
 </head>
 <body>
@@ -73,79 +64,54 @@
     <p>Protecting Poland's magical heritage since 1893</p>
   </header>
 
-  <!-- Simple hero banner inspired by national park sites -->
-  <section aria-label="Hero" style="background: linear-gradient(120deg, #004225, #0a6b3b); color:#fff;">
-    <div class="container" style="padding: 2.5em 1em;">
-      <h2 style="margin:0 0 .35em 0; color:#fff;">About Smokowisko</h2>
-      <p style="margin:0; max-width: 60ch;">
-        An information page about the origins and mission of the Park.
-      </p>
-    </div>
-  </section>
+  <nav>
+    <a href="adoption.html">Our Adoption Program</a>
+    <a href="gallery.html">Picture Gallery</a>
+    <a href="visit.html">Plan Your Visit</a>
+    <a href="staff.html">Meet Our Staff</a>
+  </nav>
 
-  <main class="container" style="display:grid; grid-template-columns: 280px 1fr; gap: 2rem; align-items:start;">
-    <!-- Left info column (like a minimalist sidebar) -->
-    <aside aria-label="At a glance" style="background:#e9f4ec; padding:1rem; border-radius:12px; position:sticky; top:72px;">
-      <h3 style="margin-top:0; color:#004225;">At a glance</h3>
-      <ul style="padding-left:1.1rem; margin:0;">
-        <li><strong>Founded:</strong> 1893 (formal charter revised 1937)</li>
-        <li><strong>Location:</strong> Southern Poland, Smokowisko Forest Reserve</li>
-        <li><strong>Focus:</strong> Conservation, research, and public education</li>
-        <li><strong>Emblem:</strong> Polish Forest Dragon</li>
-      </ul>
-    </aside>
-
-    <!-- Main content: the only information on the page -->
+  <main class="container">
     <article aria-label="Park history and mission">
       <h2>The Foundation and Mission of Smokowisko National Dragon Park</h2>
-
       <p>
         Smokowisko National Dragon Park was founded in <strong>1893</strong> by a coalition of naturalists,
-        folklorists, and local guardians who sought to protect a dwindling population of
-        Polish Forest Dragons and the unique ecosystem that shelters them. The decision to
-        establish a protected area was prompted by two converging forces of the late 19th century:
-        accelerating industrial forestry in the foothills and a wave of interest in documenting
-        living European folklore. Early caretakers recorded nesting sites, mapped feeding glades,
-        and negotiated seasonal forest quiet hours with nearby communities—customs that became the
-        backbone of the Park’s management traditions.
+        folklorists, and local guardians. Among its notable patrons were Count Janusz Radziwiłł, a respected
+        statesman and patron of the sciences; Professor Helena Modrzewska, an early zoologist from Kraków
+        University; and Captain Władysław Brzeziński, a retired cavalry officer known for his deep knowledge
+        of Poland’s wilderness. These historical figures combined their influence, expertise, and resources
+        to ensure the park’s creation and legal protection.
       </p>
-
       <p>
-        In its <em>early years (1893–1914)</em>, Smokowisko operated informally, guided by local statutes
-        and civic patronage. Rangers traveled on foot between scattered shelters, sharing hand‑written
-        ledgers of observations. A small research hut—later known as the <em>Green Lantern Station</em>—hosted
-        the first longitudinal field notes on migration corridors and molting cycles. Although modest in
-        resources, the Park pioneered practices that today would be called community science, inviting
-        shepherds, herbalists, and woodcutters to contribute sightings and weather logs.
+        The founders acted in response to accelerating industrial forestry in the foothills and the
+        growing urgency to preserve the last breeding populations of Polish Forest Dragons. Early caretakers
+        documented nesting sites, mapped feeding glades, and negotiated seasonal forest quiet hours with
+        local villages—customs that became the backbone of the Park’s management traditions.
       </p>
-
+      <p>
+        In its <em>early years (1893–1914)</em>, the park operated informally under local statutes and civic
+        patronage. Rangers traveled on foot between scattered shelters, often guided by oral reports from
+        hunters and herbalists. The now-legendary <em>Green Lantern Station</em> hosted the first longitudinal
+        field notes on dragon migration corridors and molting cycles.
+      </p>
       <p>
         The Park’s <em>formalization in the interwar period</em> brought the first comprehensive charter and
-        a clear legal mandate for habitat protection, quiet zones, and scientific study. During this time
-        a ring of buffer groves was purchased or donated to limit disturbance near roosting crags. The
-        charter also codified the role of the <em>Smokowisko Custodians</em>—a council of local representatives
-        and scholars charged with balancing conservation with cultural heritage. These measures stabilized
-        breeding success and allowed the dragon population to recover from its 19th‑century low.
+        a clear legal mandate for habitat protection. This included the creation of a ring of buffer groves
+        to reduce disturbance near roosting crags and the establishment of the <em>Smokowisko Custodians</em>—a
+        council balancing conservation with cultural heritage.
       </p>
-
       <p>
-        After mid‑century, the Park broadened its mission to include <strong>education</strong> and <strong>research</strong>
-        accessible to visitors. Forest classrooms and traveling exhibits introduced generations of students
-        to the region’s geology, hydrology, and biodiversity. Partnerships with universities strengthened
-        monitoring efforts, while careful zoning preserved dark‑sky corridors for nocturnal flight and
-        minimized light spill from nearby valleys.
+        Today, only certain designated areas of the park are open to tourists. Visitors may explore safe
+        observation points, guided trails, and educational exhibits. For safety and conservation reasons,
+        the core forest is off-limits to the public due to the potential of encountering wild dragons.
+        Only trained park rangers may enter these protected areas. Nonetheless, many visitors report
+        thrilling glimpses of dragons flying overhead or moving through the trees.
       </p>
-
       <p>
-        Today, Smokowisko National Dragon Park remains dedicated to three pillars: <strong>protection of habitat</strong>,
-        <strong>long‑term research</strong>, and <strong>public stewardship</strong>. Conservation work focuses on maintaining
-        old‑growth stands, restoring wetlands that support prey species, and safeguarding thermal updraft
-        routes used during seasonal movements. Research priorities include population genetics, nesting
-        site fidelity, and the interplay between microclimate and scale iridescence. Through guided talks,
-        open archives, and volunteer days, the Park invites visitors and neighbors alike to participate in
-        a living tradition of care that began with the founders’ vow in 1893.
+        The current dedicated staff includes Head Ranger Piotr Kowalski, Conservation Biologist Dr. Marta
+        Zielińska, Education Coordinator Aneta Nowak, and Senior Caretaker Tomasz Wróbel. Together, they
+        carry forward the founders’ mission of habitat protection, research, and public stewardship.
       </p>
-
       <h3>Founders’ Note (Excerpt)</h3>
       <p>
         “Let these forests be held in trust for the creatures who make them their home, and for those who
