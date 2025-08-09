@@ -6,26 +6,47 @@
   <title>Adoption Program - Smokowisko National Dragon Park</title>
   <meta name="description" content="Adopt a dragon virtually and become a patron of Smokowisko National Dragon Park." />
   <style>
-    body { font-family: "Segoe UI", system-ui, sans-serif; margin:0; background:#f5f7f6; color:#1d1f1e; }
-    .topbar { position:sticky; top:0; width:100%; background:rgba(0,30,18,0.85); color:#fff; z-index:50; }
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body { font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; margin:0; background:#f5f7f6; color:#1d1f1e; line-height:1.6; }
+
+    /* Topbar (matches main site) */
+    .topbar { position: sticky; top: 0; width: 100%; z-index: 50; background: rgba(0,30,18,0.85); color:#fff; }
     .topbar-inner { max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:.75rem 1rem; }
+    .brand { display:flex; align-items:center; gap:.6rem; font-weight:700; }
+    .brand svg { width:28px; height:28px; }
+    .nav { display:flex; flex-wrap:wrap; gap:.5rem; }
     .nav a { color:#fff; text-decoration:none; padding:.5rem .75rem; border-radius:8px; }
     .nav a:hover { background:rgba(255,255,255,.12); }
-    .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+
+    /* Page container & card */
+    .container { max-width:1000px; margin:2rem auto; padding:0 1rem; }
     .card { background:#fff; border-radius:14px; box-shadow:0 8px 28px rgba(0,0,0,.12); padding:2rem; }
-    h1, h2 { color:#0b4a2b; }
-    form { margin-top:1.5rem; display:grid; gap:1rem; }
+    h1, h2 { color:#0b4a2b; margin-top:0; }
+
+    /* Form */
+    form { margin-top:1.25rem; display:grid; gap:1rem; }
     label { font-weight:600; }
-    input, textarea, select { padding:.5rem; border:1px solid #ccc; border-radius:6px; font-size:1rem; }
-    button { background:#0e6b3b; color:#fff; padding:.6rem 1rem; border:none; border-radius:8px; font-weight:600; cursor:pointer; }
+    input, textarea, select {
+      padding:.6rem .7rem; border:1px solid #cfd6d3; border-radius:8px; font-size:1rem; width:100%;
+    }
+    small.help { color:#4c5a55; display:block; margin-top:.25rem; }
+    button { background:#0e6b3b; color:#fff; padding:.7rem 1.1rem; border:none; border-radius:10px; font-weight:700; cursor:pointer; }
     button:hover { background:#0b5a31; }
+
+    .note { background:#f0f7f2; border:1px solid #d8e9dd; padding:1rem; border-radius:10px; }
+    .list { padding-left:1.1rem; }
   </style>
 </head>
 <body>
-  <header class="topbar">
+  <!-- Topbar -->
+  <header class="topbar" role="banner">
     <div class="topbar-inner">
-      <div class="brand">Smokowisko National Dragon Park</div>
-      <nav class="nav">
+      <div class="brand" aria-label="Smokowisko brand">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="white" d="M12 2l3 5 6 .9-4.2 4 1 5.9L12 15l-5.8 2.8 1-5.9L3 7.9 9 7z"/></svg>
+        <span>Smokowisko National Dragon Park</span>
+      </div>
+      <nav class="nav" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="gallery.html">Picture Gallery</a>
         <a href="visit.html">Plan Your Visit</a>
@@ -37,40 +58,73 @@
   <main class="container">
     <article class="card">
       <h1>Virtual Dragon Adoption Program</h1>
+
       <p>
-        In order to support the noble mission and statutory goals of Smokowisko National Dragon Park, the Directors and devoted Custodians of the park have introduced a unique opportunity for friends of nature: the <strong>virtual adoption</strong> of one of our cherished inhabitants. By becoming a Patron of a Dragon, you join a tradition that stretches back to the park’s founding, playing a direct role in safeguarding their future.
+        To sustain the Park’s statutory mission, the Park Directors and our devoted
+        <strong>Custodians</strong>—the rangers, educators, and researchers who care for Smokowisko every day—
+        have created a way for friends of nature to help directly: the <strong>virtual adoption</strong> of one of our
+        dragons. Becoming a Patron means your gift supports habitat protection, research, food and veterinary
+        care, and education programs that inspire future guardians.
       </p>
+
       <p>
-        The idea of patronage is not new to Smokowisko. In 1894, Countess Elżbieta Dąbrowska, famed for her philanthropic work in preserving wild habitats, became the first honorary patron of a young silver-scaled dragon. In that same year, composer Aleksander Siennicki dedicated part of his concert tour earnings to improving dragon nesting grounds, while explorer Jan Franciszek Orłowski brought rare herbs from the Tatra mountains to aid dragon health. In modern times, organizations such as the Polish Nature Alliance, Green Future Foundation, and the International Conservation Trust have lent their generous support to this initiative.
+        Patronage has deep roots here. In <strong>1894</strong>, Countess <em>Elżbieta Dąbrowska</em> endowed the first
+        “quiet grove” to shield nesting sites. That same year, composer <em>Aleksander Siennicki</em> pledged proceeds
+        from a charity concert series to restore a flight corridor, while explorer <em>Jan Franciszek Orłowski</em>
+        supplied alpine herbs for convalescing drakes. In modern times, organizations such as the
+        <em>Polish Nature Alliance</em>, the <em>Green Future Foundation</em>, and the
+        <em>International Conservation Trust</em> have all contributed to Smokowisko’s patron fund—help that lets
+        us protect dragons where they truly belong: in the wild.
       </p>
-      <p>
-        Becoming a Patron is open to anyone between the ages of 8 and 100, or younger with the consent of a legal guardian. We look for Patrons who embody the finest qualities: courage to stand for what is right, kindness toward all living creatures, curiosity to learn, and the wisdom to care for something beyond oneself. As a Patron, you inspire others and set an example of stewardship for future generations.
-      </p>
+
+      <h2>Who Can Become a Patron?</h2>
+      <div class="note">
+        <ul class="list">
+          <li><strong>Age:</strong> 8–100. Younger applicants are welcome with consent of a legal guardian.</li>
+          <li><strong>Spirit:</strong> Patrons strive to be <em>brave</em>, <em>kind</em>, <em>curious</em>, and <em>wise</em>—good
+              examples for dragons and people alike.</li>
+          <li><strong>Nature of adoption:</strong> Symbolic & virtual. No dragon is relocated; your support
+              funds conservation and research, and you receive updates about your adopted dragon.</li>
+        </ul>
+      </div>
 
       <h2>About the Patron Application</h2>
       <p>
-        The form below is to be filled by the person wishing to adopt a dragon virtually. This is a symbolic adoption — no dragon will be relocated — but your name will be recorded in our Book of Patrons, and you will receive updates about your dragon.
+        Please complete the form below. This application is for the person willing to adopt a dragon virtually.
+        After submission you’ll be taken to a confirmation page with a generated application number.
       </p>
 
-      <form onsubmit="event.preventDefault(); alert('Your application was sent. Once approved, we will send you an email.');">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" required>
+      <!-- Submit redirects to confirmation.html with a random app number -->
+      <form onsubmit="event.preventDefault(); const num=Math.floor(Math.random()*90000)+10000; window.location.href=`confirmation.html?app=${num}`;">
+        <div>
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" required />
+        </div>
 
-        <label for="age">Age</label>
-        <input type="number" id="age" name="age" min="8" max="100" required>
+        <div>
+          <label for="age">Age</label>
+          <input id="age" name="age" type="number" min="8" max="100" required />
+          <small class="help">Applicants under 18 must have consent from a legal guardian.</small>
+        </div>
 
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required>
+        <div>
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" required />
+        </div>
 
-        <label for="qualities">Why do you want to be a dragon patron? (Mention your brave, smart, and kind qualities!)</label>
-        <textarea id="qualities" name="qualities" rows="4" required></textarea>
+        <div>
+          <label for="dragon">Choose Your Dragon</label>
+          <select id="dragon" name="dragon">
+            <option>Iskra — Young Polish Forest Dragon</option>
+            <option>Żar — Mountain Ember Dragon</option>
+            <option>Mira — Golden Mist Dragon</option>
+          </select>
+        </div>
 
-        <label for="dragon">Choose your dragon</label>
-        <select id="dragon" name="dragon">
-          <option>Iskra (Young Polish Forest Dragon)</option>
-          <option>Żar (Mountain Ember Dragon)</option>
-          <option>Mira (Golden Mist Dragon)</option>
-        </select>
+        <div>
+          <label for="qualities">Why do you want to be a Dragon Patron?</label>
+          <textarea id="qualities" name="qualities" rows="4" placeholder="Tell us about your brave, kind, and curious qualities…" required></textarea>
+        </div>
 
         <button type="submit">Submit Application</button>
       </form>
@@ -78,7 +132,9 @@
   </main>
 
   <footer>
-    <p style="text-align:center; background:#032f1b; color:#fff; padding:1.75rem 1rem;">&copy; 2025 Smokowisko National Dragon Park. All rights reserved.</p>
+    <p style="text-align:center; background:#032f1b; color:#fff; padding:1.75rem 1rem;">
+      &copy; 2025 Smokowisko National Dragon Park. All rights reserved.
+    </p>
   </footer>
 </body>
 </html>
