@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Plan Your Visit – Smokowisko National Dragon Park</title>
-  <meta name="description" content="Zaplanuj wizytę w Smokowisko National Dragon Park: trasy, punkty widokowe, noclegi, wydarzenia i zasady bezpieczeństwa."/>
+  <meta name="description" content="Plan your trip to Smokowisko National Dragon Park: trails, viewpoints, lodging, camping, events, and safety info."/>
   <style>
     :root { color-scheme: light; }
     * { box-sizing: border-box; }
     body { font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; margin:0; background:#f5f7f6; color:#1d1f1e; line-height:1.65; }
 
-    /* Topbar (spójny wygląd) */
+    /* Topbar (shared look) */
     .topbar { position: sticky; top: 0; width: 100%; z-index: 50; background: rgba(0,30,18,0.85); color:#fff; }
     .topbar-inner { max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:.75rem 1rem; }
     .brand { display:flex; align-items:center; gap:.6rem; font-weight:700; }
@@ -24,7 +24,7 @@
     .hero h1 { margin:0 0 .4rem; font-size: clamp(1.9rem, 4.5vw, 3rem); }
     .hero p { margin:.25rem auto 0; max-width: 65ch; opacity:.95; }
 
-    /* Layout / karty */
+    /* Layout / cards */
     .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
     .card { background:#fff; border-radius:14px; box-shadow:0 8px 28px rgba(0,0,0,.12); padding:2rem; margin-bottom: 1.25rem; }
     h2 { color:#0b4a2b; margin-top:0; }
@@ -36,7 +36,7 @@
     .note { background:#f0f7f2; border:1px solid #d8e9dd; border-radius:10px; padding:1rem; }
     .muted { color:#4b5b55; }
 
-    /* Tabela tras */
+    /* Trails table */
     table { width:100%; border-collapse: collapse; }
     th, td { text-align:left; border-bottom:1px solid #e7ede9; padding:.6rem .5rem; vertical-align: top; }
     th { color:#0b4a2b; }
@@ -45,7 +45,7 @@
     .btn { display:inline-block; background:#0e6b3b; color:#fff; text-decoration:none; padding:.6rem .9rem; border-radius:10px; font-weight:700; }
     .btn:hover { background:#0b5a31; }
 
-    /* MAPA */
+    /* MAP */
     .mapwrap { background:#fff; border-radius:14px; box-shadow:0 8px 28px rgba(0,0,0,.12); padding:1rem; }
     .mapheader { display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
     .legend { display:flex; gap:.75rem; align-items:center; flex-wrap:wrap; }
@@ -75,229 +75,234 @@
         <span>Smokowisko National Dragon Park</span>
       </div>
       <nav class="nav" aria-label="Primary">
-        <a href="index.html">Strona główna</a>
-        <a href="adoption.html">Adopcja</a>
-        <a href="dragons.html">Poznaj nasze smoki</a>
-        <a href="gallery.html">Galeria</a>
-        <a href="staff.html">Zespół</a>
+        <a href="index.html">Home</a>
+        <a href="adoption.html">Our Adoption Program</a>
+        <a href="dragons.html">Meet Our Dragons</a>
+        <a href="gallery.html">Picture Gallery</a>
+        <a href="staff.html">Meet Our Staff</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
   <section class="hero">
-    <h1>Zaplanuj wizytę</h1>
-    <p>Smokowisko to rozległy, górsko-leśny park z widokami, które zapiera-ją dech — i z mieszkańcami, których trzeba szanować. Poniżej znajdziesz szlaki, punkty widokowe, noclegi, wydarzenia i zasady bezpieczeństwa.</p>
+    <h1>Plan Your Visit</h1>
+    <p>Smokowisko is a vast mountain–forest reserve with views that steal your breath—and residents who deserve your respect. Below you’ll find trails, viewpoints, lodging, camping, events and safety guidance.</p>
   </section>
 
   <main class="container">
-    <!-- MAPA PARKU (proste SVG) -->
-    <section class="mapwrap" aria-label="Szkicowa mapa Smokowiska">
+    <!-- PARK MAP (simple SVG) -->
+    <section class="mapwrap" aria-label="Sketch map of the Park">
       <div class="mapheader">
-        <h2 style="margin:0; color:#0b4a2b;">Mapa orientacyjna parku</h2>
-        <div class="legend" aria-label="Legenda">
-          <span><i class="dot center"></i> Centrum / Kasa</span>
-          <span><i class="dot view"></i> Punkt widokowy</span>
-          <span><i class="dot camp"></i> Pole namiotowe</span>
-          <span><i class="dot hut"></i> Schronisko</span>
-          <span><i class="dot food"></i> Gastronomia</span>
+        <h2 style="margin:0; color:#0b4a2b;">Orientation Map</h2>
+        <div class="legend" aria-label="Legend">
+          <span><i class="dot center"></i> Visitor Center</span>
+          <span><i class="dot view"></i> Viewpoint</span>
+          <span><i class="dot camp"></i> Campground</span>
+          <span><i class="dot hut"></i> Lodge</span>
+          <span><i class="dot food"></i> Food</span>
         </div>
       </div>
       <svg viewBox="0 0 900 520" role="img" aria-labelledby="maptitle mapdesc">
-        <title id="maptitle">Mapa orientacyjna Smokowisko National Dragon Park</title>
-        <desc id="mapdesc">Schematyczny układ doliny rzecznej, grzbietów oraz lokalizacji punktów: Centrum, Smocza Skarpa, Polana Iskry, Przystań Brzezina, Schronisko Zielona Latarnia.</desc>
+        <title id="maptitle">Orientation Map — Smokowisko National Dragon Park</title>
+        <desc id="mapdesc">Schematic valley, ridges and locations: Forest Meadow Visitor Center, Dragon Ledge viewpoint, Iskra Meadow Camp, Brzezina Riverside Camp, Green Lantern Lodge.</desc>
 
-        <!-- Tło lasu i grzbietu -->
+        <!-- Forest & ridge background -->
         <rect x="0" y="0" width="900" height="520" class="forest"/>
         <path d="M0,220 C180,180 250,160 400,170 C560,180 690,210 900,180 L900,520 L0,520 Z" class="ridge"/>
 
-        <!-- Rzeka -->
+        <!-- River -->
         <path d="M20,300 C160,340 240,360 360,350 C480,340 580,310 740,330 C820,340 880,360 900,380 L900,520 L0,520 L0,420 C60,380 80,360 20,300 Z" class="river"/>
 
-        <!-- Szlaki (schematycznie) -->
+        <!-- Trails (schematic) -->
         <path d="M120,420  200,360  280,330  340,300" class="trail"/>
         <path d="M340,300  420,260  520,240  620,230" class="trail"/>
         <path d="M420,260  460,300  520,330" class="trail"/>
 
-        <!-- PUNKTY: koła z obrysem białym -->
-        <!-- Centrum Leśna Polana -->
+        <!-- Pins -->
+        <!-- Forest Meadow Visitor Center -->
         <circle cx="180" cy="370" r="8" class="pin" fill="#0e6b3b">
-          <title>Centrum dla odwiedzających „Leśna Polana”</title>
+          <title>Forest Meadow Visitor Center</title>
         </circle>
-        <text x="195" y="374" class="label">Centrum „Leśna Polana”</text>
+        <text x="195" y="374" class="label">Visitor Center</text>
 
-        <!-- Smocza Skarpa (widok) -->
+        <!-- Dragon Ledge (view) -->
         <circle cx="520" cy="240" r="8" class="pin" fill="#e67e22">
-          <title>Smocza Skarpa — punkt widokowy</title>
+          <title>Dragon Ledge — viewpoint</title>
         </circle>
-        <text x="535" y="244" class="label">Smocza Skarpa</text>
+        <text x="535" y="244" class="label">Dragon Ledge</text>
 
-        <!-- Polana Iskry (camp) -->
+        <!-- Iskra Meadow Camp -->
         <circle cx="300" cy="320" r="8" class="pin" fill="#2d98da">
-          <title>Pole namiotowe „Polana Iskry”</title>
+          <title>Iskra Meadow Campground</title>
         </circle>
-        <text x="315" y="324" class="label">Polana Iskry (camp)</text>
+        <text x="315" y="324" class="label">Iskra Meadow (camp)</text>
 
-        <!-- Przystań Brzezina (camp nad rzeką) -->
+        <!-- Brzezina Riverside Camp -->
         <circle cx="420" cy="340" r="8" class="pin" fill="#2d98da">
-          <title>Przystań Brzezina — pole namiotowe nad rzeką</title>
+          <title>Brzezina Riverside Campground</title>
         </circle>
-        <text x="435" y="344" class="label">Przystań Brzezina (camp)</text>
+        <text x="435" y="344" class="label">Brzezina Riverside (camp)</text>
 
-        <!-- Schronisko Zielona Latarnia -->
+        <!-- Green Lantern Lodge -->
         <circle cx="240" cy="350" r="8" class="pin" fill="#8e44ad">
-          <title>Schronisko „Zielona Latarnia”</title>
+          <title>Green Lantern Lodge</title>
         </circle>
-        <text x="255" y="354" class="label">Schronisko „Zielona Latarnia”</text>
+        <text x="255" y="354" class="label">Green Lantern Lodge</text>
 
-        <!-- Gastronomia przy Centrum -->
+        <!-- Food near Visitor Center -->
         <circle cx="165" cy="360" r="6" class="pin" fill="#c0392b">
-          <title>Karczma „Pod Skrzydłem” / Kawiarnia „Latarnia”</title>
+          <title>Pod Skrzydłem Inn / Latarnia Café</title>
         </circle>
-        <text x="120" y="350" class="label">Gastro</text>
+        <text x="120" y="350" class="label">Food</text>
       </svg>
-      <p class="muted" style="margin:.5rem 0 0;">Mapa ma charakter szkicowy — nie używaj do nawigacji w terenie. Dokładne ślady GPX dostępne w Centrum.</p>
+      <p class="muted" style="margin:.5rem 0 0;">Sketch map only — not for navigation. Detailed GPX tracks available at the Visitor Center.</p>
     </section>
 
-    <!-- Reszta strony (skrócona): kluczowe sekcje z poprzedniej wersji -->
+    <!-- General info -->
     <section class="card">
-      <h2>Informacje ogólne</h2>
+      <h2>General information</h2>
       <div class="grid cols-2">
         <div>
-          <p><strong>Powierzchnia:</strong> ok. <strong>38 400 ha</strong> (strefa ścisła + bufor). Rdzeń parku obejmuje stare drzewostany mieszane, wapienne urwiska i rozlewiska rzeczne.</p>
-          <p><strong>Centrum dla odwiedzających:</strong> Leśna Polana (parking, kasa, ekspozycja, toalety, punkt gastronomiczny).</p>
-          <p class="muted">Uwaga: wejście do strefy ścisłej możliwe <em>wyłącznie</em> dla strażników. Dla turystów udostępniono wybrane punkty i trasy krajoznawcze.</p>
+          <p><strong>Area:</strong> approx. <strong>38,400 ha</strong> (core + buffer). The core holds old‑growth mixed forest, limestone cliffs and river wetlands.</p>
+          <p><strong>Visitor Center:</strong> Forest Meadow (parking, tickets, exhibit, restrooms, small eatery).</p>
+          <p class="muted">Note: the <em>core zone is ranger‑only</em>. Visitors may use designated trails and viewpoints.</p>
         </div>
         <div class="note">
-          <strong>Smoki a zwiedzanie</strong>
+          <strong>Dragons & visiting</strong>
           <ul>
-            <li>Park <em>nie gwarantuje</em> zobaczenia smoka.</li>
-            <li>Często słychać nawoływania o świcie lub widać ślady ich bytności (łuski, tropy, okopcone półki).</li>
-            <li>Najlepszy daleki podgląd: <strong>Smocza Skarpa</strong> — o zmierzchu bywa widać sylwetki nad grzbietami.</li>
+            <li>The Park <em>does not guarantee</em> a dragon sighting.</li>
+            <li>Very often you can hear calls at dawn or notice signs (shed scales, tracks, soot on ledges).</li>
+            <li>Best distant view: <strong>Dragon Ledge</strong> viewpoint — silhouettes are sometimes visible at dusk over the ridges.</li>
           </ul>
         </div>
       </div>
       <div class="btnrow">
-        <a class="btn" href="dragons.html">Poznaj gatunki</a>
-        <a class="btn" href="adoption.html">Zostań patronem</a>
+        <a class="btn" href="dragons.html">Learn the species</a>
+        <a class="btn" href="adoption.html">Become a patron</a>
       </div>
     </section>
 
+    <!-- Trails -->
     <section class="card">
-      <h2>Trasy krajoznawcze i punkty widokowe</h2>
-      <table aria-label="Lista tras">
+      <h2>Scenic Trails & Viewpoints</h2>
+      <table aria-label="Trail list">
         <thead>
           <tr>
-            <th>Trasa</th><th>Dystans / czas</th><th>Trudność</th><th>Najciekawsze miejsca po drodze</th>
+            <th>Trail</th><th>Distance / time</th><th>Difficulty</th><th>Highlights along the way</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>1. Dolina Złotych Strug</strong></td>
-            <td>7,5 km • 2–3 h (pętla)</td>
-            <td>Łatwa</td>
-            <td>Meandry rzeki, kładki nad rozlewiskami, <em>Źródło Echo</em>, gniazda zimorodków.</td>
+            <td><strong>1. Golden Brooks Valley</strong></td>
+            <td>7.5 km • 2–3 h (loop)</td>
+            <td>Easy</td>
+            <td>Meandering river with green lichens, boardwalks over wetlands, <em>Echo Spring</em> (natural reverb like dragon whistles), kingfisher banks.</td>
           </tr>
           <tr>
-            <td><strong>2. Smocza Skarpa</strong> (widok)</td>
-            <td>4,2 km • 1,5 h w obie strony</td>
-            <td>Łatwa/umiark.</td>
-            <td>Taras na krawędzi urwiska; panorama korytarzy przelotowych smoków.</td>
+            <td><strong>2. Dragon Ledge</strong> (viewpoint)</td>
+            <td>4.2 km • 1.5 h round‑trip</td>
+            <td>Easy/Moderate</td>
+            <td>Balcony on a limestone cliff; panorama of flight corridors. Dusk silhouettes of <em>Draconis sylvanus</em> are sometimes seen.</td>
           </tr>
           <tr>
-            <td><strong>3. Pętla Zielonych Żlebów</strong></td>
+            <td><strong>3. Green Gully Loop</strong></td>
             <td>12 km • 4–5 h</td>
-            <td>Umiark./trudna</td>
-            <td>Wąwozy, „Organowe Płyty”, punkt „Latarnia”.</td>
+            <td>Moderate/Hard</td>
+            <td>Limestone ravines, the “Organ Slabs” (wind makes a low tone), “Lantern” vista towards the core zone.</td>
           </tr>
           <tr>
-            <td><strong>4. Młyńskie Turnie</strong></td>
+            <td><strong>4. Mill Spires</strong></td>
             <td>9 km • 3–4 h</td>
-            <td>Umiark.</td>
-            <td>Basaltowe słupy, polana z mchem, wodospad Kurtyna.</td>
+            <td>Moderate</td>
+            <td>Basalt columns, star‑moss meadow, Curtain Falls (best after rain).</td>
           </tr>
           <tr>
-            <td><strong>5. Szlak Cichych Poranków</strong></td>
-            <td>5 km • 1,5–2 h</td>
-            <td>Łatwa</td>
-            <td>Platformy w trzcinowiskach; o świcie złota mgiełka <em>D. aureomista</em>.</td>
+            <td><strong>5. Quiet Mornings Path</strong></td>
+            <td>5 km • 1.5–2 h</td>
+            <td>Easy</td>
+            <td>Reedbed platforms; at first light a golden haze from <em>D. aureomista</em> displays may be visible.</td>
           </tr>
         </tbody>
       </table>
-      <p class="muted" style="margin-top:.6rem;">Trasy jednostronne względem strefy ścisłej — nie schodź z wytyczonych ścieżek.</p>
+      <p class="muted" style="margin-top:.6rem;">All trails run alongside the core boundary—please stay on marked paths and platforms.</p>
     </section>
 
+    <!-- Lodging & camping -->
     <section class="card">
-      <h2>Noclegi i biwaki</h2>
+      <h2>Lodging & Camping</h2>
       <div class="grid cols-2">
         <div>
-          <h3>Gdzie się zatrzymać</h3>
+          <h3>Where to stay</h3>
           <ul>
-            <li><strong>Schronisko „Zielona Latarnia”</strong> – 32 miejsca, kuchnia, suszarnia.</li>
-            <li><strong>Domki „Przy Smoczej Skarpie”</strong> – 6 domków (2–4 os.).</li>
-            <li><strong>Kwatera „Leśna Polana”</strong> – pokoje przy Centrum.</li>
+            <li><strong>Green Lantern Lodge</strong> – 32 beds, self‑catering kitchen, drying room; 1.2 km from the Visitor Center.</li>
+            <li><strong>Dragon Ledge Cabins</strong> – 6 cabins (2–4 guests), quiet‑hours zone.</li>
+            <li><strong>Forest Meadow Guesthouse</strong> – rooms next to the Visitor Center (weekends fill fast).</li>
           </ul>
         </div>
         <div>
-          <h3>Miejsca namiotowe</h3>
+          <h3>Campgrounds</h3>
           <ul>
-            <li><strong>Polana Iskry</strong> – 20 stanowisk, ognisko w kręgu.</li>
-            <li><strong>Przystań Brzezina</strong> – 12 stanowisk nad rzeką.</li>
+            <li><strong>Iskra Meadow</strong> – 20 pitches, fire ring only; firewood available on site.</li>
+            <li><strong>Brzezina Riverside</strong> – 12 pitches by the river (filter your water!), peaceful at dawn.</li>
           </ul>
-          <p class="muted">Biwakowanie tylko na polach i za zgodą. Zakaz wstępu do strefy ścisłej nocą.</p>
+          <p class="muted">Camping is allowed <em>only</em> at designated campgrounds and with a permit. No entry to the core zone at dusk or night.</p>
         </div>
       </div>
     </section>
 
+    <!-- Events -->
     <section class="card">
-      <h2>Wydarzenia w parku</h2>
+      <h2>Park Events</h2>
       <div class="grid cols-3">
-        <div class="note"><h3>Noce Nad Smokiem</h3><p>Pokazy nieba i opowieści. Cze–Sie, pt 21:00.</p></div>
-        <div class="note"><h3>Tydzień Wiedzy o Smokach</h3><p>Warsztaty i prelekcje. Maj i wrzesień.</p></div>
-        <div class="note"><h3>Jesienne Liczenie Łusek</h3><p>Monitoring miejsc zrzutu łusek. Październik (weekendy).</p></div>
+        <div class="note"><h3>Nights Beneath the Dragon</h3><p>Summer stargazing and tales about flight paths. June–August, Fridays 21:00.</p></div>
+        <div class="note"><h3>Dragon Science Week</h3><p>Workshops and talks with Park Custodians. Early May & late September.</p></div>
+        <div class="note"><h3>Autumn Scale Count</h3><p>Volunteer monitoring of molting sites. October (weekends).</p></div>
       </div>
     </section>
 
+    <!-- Safety & seasonal closures -->
     <section class="card">
-      <h2>Sezonowe wyłączenia i bezpieczeństwo</h2>
+      <h2>Seasonal Closures & Safety</h2>
       <ul>
-        <li><strong>Okres lęgów:</strong> 15 IV – 31 VII — zamknięte: górne odcinki Pętli Zielonych Żlebów, dojścia pod „Organowe Płyty”.</li>
-        <li><strong>Hibernacja:</strong> XII – II — ograniczony ruch na Smoczej Skarpie (cisza nocna, brak oświetlenia).</li>
-        <li><strong>Pogoda:</strong> po burzach możliwe zamknięcia kładek w Dolinie Złotych Strug.</li>
+        <li><strong>Nesting season:</strong> <em>15 April – 31 July</em> — closed: upper parts of Green Gully Loop; approach to the Organ Slabs. Dragons can be more territorial.</li>
+        <li><strong>Hibernation:</strong> <em>December – February</em> — limited access to Dragon Ledge (dark‑sky quiet hours).</li>
+        <li><strong>Weather:</strong> after storms, boardwalks in Golden Brooks Valley may close temporarily.</li>
       </ul>
-      <div class="note"><strong>Zasady:</strong> pozostawaj na szlaku, trzymaj dystans, bez dronów, nie zostawiaj jedzenia. Obserwacje smoków zgłaszaj w Centrum.</div>
+      <div class="note"><strong>Rules:</strong> stay on trail, keep distance from cliff edges, no drones, no food left behind. If you spot a dragon—admire from afar, do not interact, and report the sighting at the Visitor Center.</div>
     </section>
 
+    <!-- Food & practical -->
     <section class="card">
-      <h2>Gastronomia i informacje praktyczne</h2>
+      <h2>Food & Practical Info</h2>
       <div class="grid cols-2">
         <div>
-          <h3>Gdzie zjeść</h3>
+          <h3>Where to eat</h3>
           <ul>
-            <li><strong>Karczma „Pod Skrzydłem”</strong> – dania regionalne.</li>
-            <li><strong>Kawiarnia „Latarnia”</strong> – kawa, herbata, kanapki na wynos.</li>
-            <li><strong>Bufet „Brzezina”</strong> – sezonowo przy polu namiotowym.</li>
+            <li><strong>Pod Skrzydłem Inn</strong> – regional dishes, juniper soup, blueberry cake.</li>
+            <li><strong>Latarnia Café</strong> – coffee, honey‑lime tea, grab‑and‑go sandwiches.</li>
+            <li><strong>Brzezina Kiosk</strong> – seasonal, by the riverside camp.</li>
           </ul>
         </div>
         <div>
-          <h3>Bilety i płatności</h3>
+          <h3>Tickets & payments</h3>
           <ul>
-            <li>Kasy w Centrum + automaty na parkingach.</li>
-            <li>Akceptowane: karty, BLIK, płatności telefonem, gotówka PLN.</li>
-            <li>Parkingi: 10–25 PLN/dzień.</li>
+            <li>Tickets at the Visitor Center and parking machines.</li>
+            <li>Accepted: cards (Visa/Mastercard), mobile pay, BLIK, cash (PLN).</li>
+            <li>Parking: 10–25 PLN/day (location dependent).</li>
           </ul>
           <div class="btnrow">
-            <a class="btn" href="adoption.html">Wesprzyj park – Adopcja</a>
-            <a class="btn" href="dragons.html#species">Poznaj gatunki</a>
+            <a class="btn" href="adoption.html">Support the Park – Adoption</a>
+            <a class="btn" href="dragons.html#species">Learn the species</a>
           </div>
         </div>
       </div>
-      <p class="muted">Toalety: Centrum, Smocza Skarpa, Polana Iskry. Ładowanie telefonów: Centrum, Schronisko.</p>
+      <p class="muted">Restrooms: Visitor Center, Dragon Ledge, Iskra Meadow. Phone‑charging: Visitor Center & Green Lantern Lodge.</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Smokowisko National Dragon Park. Wszelkie prawa zastrzeżone.</p>
+    <p>&copy; 2025 Smokowisko National Dragon Park. All rights reserved.</p>
   </footer>
 </body>
 </html>
