@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet Our Staff - Smokowisko National Dragon Park</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      background-color: #f2f7f3;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #004225;
+      color: white;
+      padding: 1.5em;
+      text-align: center;
+    }
+    nav {
+      background-color: #027333;
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      padding: 0.5em;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.3em 0.7em;
+      border-radius: 5px;
+    }
+    nav a:hover {
+      background-color: rgba(255,255,255,0.15);
+    }
+    .container {
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 0 1em;
+    }
+    h2, h3 {
+      color: #004225;
+    }
+    .staff-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5em;
+      margin-bottom: 2em;
+    }
+    .staff-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      padding-bottom: 1em;
+    }
+    .staff-card img {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+      display: block;
+    }
+    .contact {
+      background-color: #e9f4ec;
+      padding: 1.5em;
+      border-radius: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 1em;
+      background-color: #004225;
+      color: white;
+    }
+  </style>
+  <script>
+    function openImage(src) {
+      window.open(src, '_blank');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Meet Our Staff</h1>
+    <p>The dedicated team behind Smokowisko’s conservation efforts</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="adoption.html">Adoption Program</a>
+    <a href="dragons.html">Meet Our Dragons</a>
+    <a href="visit.html">Plan Your Visit</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="meet-our-staff.html">Meet Our Staff</a>
+  </nav>
+
+  <main class="container">
+    <section>
+      <h2>Our Most Notable Staff Members</h2>
+      <div class="staff-grid">
+        <div class="staff-card">
+          <img src="jan-kowalski.jpg" alt="Jan Kowalski" onclick="openImage('jan-kowalski.jpg')">
+          <h3>Jan Kowalski – Head Ranger</h3>
+          <p>With over 30 years patrolling the Smokowisko Forest, Jan is the Park’s living encyclopedia. Known for his calm approach even when spotting a Draconis sylvanus up close, he is responsible for ranger training and safety protocols.</p>
+        </div>
+        <div class="staff-card">
+          <img src="magdalena-wisniewska.jpg" alt="Magdalena Wiśniewska" onclick="openImage('magdalena-wisniewska.jpg')">
+          <h3>Magdalena Wiśniewska – Senior Dragon Biologist</h3>
+          <p>Magdalena leads the Park’s dragon behavior research unit. She specializes in scale iridescence studies and migratory path mapping, and has authored several field manuals for dragon observation.</p>
+        </div>
+        <div class="staff-card">
+          <img src="piotr-nowak.jpg" alt="Piotr Nowak" onclick="openImage('piotr-nowak.jpg')">
+          <h3>Piotr Nowak – Cultural Liaison</h3>
+          <p>Tasked with preserving the local folklore that surrounds dragons, Piotr bridges modern conservation with centuries-old traditions. He organizes seasonal festivals and educational programs for visitors.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Contact the Park Administration</h2>
+      <p>Email: <a href="mailto:smokowisko.park@gmail.com">smokowisko.park@gmail.com</a></p>
+      <p>Address: Smokowisko National Dragon Park Administration, Smokowisko Forest Reserve, Southern Poland</p>
+      <p>Office Hours: Monday – Friday, 9:00 – 17:00 (local time)</p>
+      <p>For urgent ranger assistance during your visit, please contact the Visitor Center.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Smokowisko National Dragon Park. All rights reserved.</p>
+  </footer>
+</body>
+</html>
