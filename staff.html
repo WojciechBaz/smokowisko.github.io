@@ -28,8 +28,11 @@
     @media (min-width: 900px){ .staff-grid { grid-template-columns: repeat(3, 1fr); } }
 
     .staff-card { background:#fff; border:1px solid #e2ebe6; border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,.08); }
+
+    /* Uniform photo sizing */
     .photo { width:100%; aspect-ratio: 3 / 4; overflow:hidden; background:#eaf5ef; border-bottom:1px solid #dfe9e3; }
     .photo img { width:100%; height:100%; object-fit:cover; display:block; }
+
     .staff-body { padding:1rem 1rem 1.25rem; }
     .staff-body p { margin:.4rem 0 0; color:#394e44; }
 
@@ -60,7 +63,7 @@
     <section class="card">
       <h2>Our Most Notable Staff Members</h2>
       <div class="staff-grid">
-        <!-- Jan -->
+        <!-- Jan (keeps original description) -->
         <article class="staff-card">
           <a class="photo" href="jan-kowalski.jpg" target="_blank" rel="noopener">
             <img src="jan-kowalski.jpg" alt="Jan Kowalski, Head Ranger" loading="lazy" decoding="async">
@@ -71,25 +74,25 @@
           </div>
         </article>
 
-        <!-- Magdalena -->
+        <!-- Magdalena (keeps original description) -->
         <article class="staff-card">
           <a class="photo" href="magdalena-wisniewska.jpg" target="_blank" rel="noopener">
             <img src="magdalena-wisniewska.jpg" alt="Magdalena Wiśniewska, Senior Dragon Biologist" loading="lazy" decoding="async">
           </a>
           <div class="staff-body">
             <h3>Magdalena Wiśniewska – Senior Dragon Biologist</h3>
-            <p>Magdalena leads the Park’s dragon behavior research unit. She specializes in scale iridescence studies and migratory path mapping, and has authored several field manuals for careful, ethical observation.</p>
+            <p>Magdalena leads the Park’s dragon behavior research unit. She specializes in scale iridescence studies and migratory path mapping, and has authored several field manuals for dragon observation.</p>
           </div>
         </article>
 
-        <!-- Piotr -->
+        <!-- Piotr (keeps original description) -->
         <article class="staff-card">
           <a class="photo" href="piotr-nowak.jpg" target="_blank" rel="noopener">
             <img src="piotr-nowak.jpg" alt="Piotr Nowak, Cultural Liaison" loading="lazy" decoding="async">
           </a>
           <div class="staff-body">
             <h3>Piotr Nowak – Cultural Liaison</h3>
-            <p>Piotr preserves the folklore that surrounds dragons and bridges modern conservation with centuries-old traditions. He coordinates seasonal festivals and education programs for visitors.</p>
+            <p>Tasked with preserving the local folklore that surrounds dragons, Piotr bridges modern conservation with centuries-old traditions. He organizes seasonal festivals and educational programs for visitors.</p>
           </div>
         </article>
       </div>
