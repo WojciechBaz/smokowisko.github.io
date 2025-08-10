@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Picture Gallery – Smokowisko National Dragon Park</title>
+  <meta name="description" content="Photo gallery of Smokowisko National Dragon Park: nature, animals, and dragon sights." />
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body { font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; margin:0; background:#f5f7f6; color:#1d1f1e; }
+
+    /* Topbar */
+    .topbar { position: sticky; top: 0; width: 100%; z-index: 50; background: rgba(0,30,18,0.85); color:#fff; }
+    .topbar-inner { max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:.75rem 1rem; }
+    .brand { display:flex; align-items:center; gap:.6rem; font-weight:700; }
+    .brand svg { width:28px; height:28px; }
+    .nav { display:flex; flex-wrap:wrap; gap:.5rem; }
+    .nav a { color:#fff; text-decoration:none; padding:.5rem .75rem; border-radius:8px; }
+    .nav a:hover { background:rgba(255,255,255,.12); }
+
+    /* Hero */
+    .hero { background: linear-gradient(rgba(0,30,18,0.62), rgba(0,30,18,0.62)), url('background.jpg') center/cover no-repeat; color:#fff; text-align:center; padding:3rem 1rem; }
+    .hero h1 { margin:0 0 .4rem; font-size: clamp(1.9rem, 4.5vw, 3rem); }
+
+    /* Container */
+    .container { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+    .section { background:#fff; border-radius:14px; box-shadow:0 8px 28px rgba(0,0,0,.12); padding:1.25rem; margin-bottom:1rem; }
+    h2 { color:#0b4a2b; margin:0 0 .75rem; }
+    p.muted { color:#4b5b55; margin:.25rem 0 1rem; }
+
+    /* Grid */
+    .grid { display:grid; gap:.6rem; }
+    @media (min-width: 640px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 960px) { .grid { grid-template-columns: repeat(4, 1fr); } }
+
+    figure { margin:0; border-radius:12px; overflow:hidden; background:#eef5f0; border:1px solid #dbe9e1; }
+    figure img { width:100%; height: 190px; object-fit: cover; display:block; transition: transform .2s ease; }
+    figure:hover img { transform: scale(1.03); }
+    figcaption { padding:.5rem .6rem; font-size:.9rem; color:#355a47; background:#f6fbf8; border-top:1px solid #e7f0ea; }
+
+    /* Lightbox */
+    dialog#lightbox { width:min(96vw, 1100px); border:none; padding:0; border-radius:14px; overflow:hidden; box-shadow:0 30px 80px rgba(0,0,0,.4); }
+    dialog::backdrop { background: rgba(0,0,0,0.6); }
+    .lb-head { display:flex; justify-content:space-between; align-items:center; padding:.6rem .8rem; background:#0e6b3b; color:#fff; }
+    .lb-body { background:#000; }
+    .lb-body img { display:block; width:100%; height:auto; }
+    .lb-close { background:transparent; border:none; color:#fff; font-weight:700; font-size:1rem; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <!-- Topbar -->
+  <header class="topbar" role="banner">
+    <div class="topbar-inner">
+      <div class="brand" aria-label="Smokowisko brand">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="white" d="M12 2l3 5 6 .9-4.2 4 1 5.9L12 15l-5.8 2.8 1-5.9L3 7.9 9 7z"/></svg>
+        <span>Smokowisko National Dragon Park</span>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="adoption.html">Our Adoption Program</a>
+        <a href="dragons.html">Meet Our Dragons</a>
+        <a href="visit.html">Plan Your Visit</a>
+        <a href="staff.html">Meet Our Staff</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Picture Gallery</h1>
+    <p class="muted" style="margin:0 auto; max-width:60ch;">A small, curated set of views from the Park. Click any thumbnail to open a large photo.</p>
+  </section>
+
+  <main class="container">
+    <!-- Nature -->
+    <section class="section" id="nature">
+      <h2>Nature</h2>
+      <p class="muted">Landscapes, rivers, cliffs and morning fog.</p>
+      <div class="grid">
+        <!-- Replace src/href with your real files; keep structure so the lightbox works. -->
+        <figure>
+          <img src="nature-1.jpg" alt="Morning fog over the valley" loading="lazy" data-full="nature-1.jpg"/>
+          <figcaption>Morning fog over the valley</figcaption>
+        </figure>
+        <figure>
+          <img src="nature-2.jpg" alt="Basalt columns at Mill Spires" loading="lazy" data-full="nature-2.jpg"/>
+          <figcaption>Basalt columns at Mill Spires</figcaption>
+        </figure>
+        <figure>
+          <img src="nature-3.jpg" alt="Curtain Falls after rain" loading="lazy" data-full="nature-3.jpg"/>
+          <figcaption>Curtain Falls after rain</figcaption>
+        </figure>
+        <figure>
+          <img src="nature-4.jpg" alt="Dragon Ledge at dusk" loading="lazy" data-full="nature-4.jpg"/>
+          <figcaption>Dragon Ledge at dusk</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Animals -->
+    <section class="section" id="animals">
+      <h2>Animals</h2>
+      <p class="muted">Wildlife that shares the forest and wetlands.</p>
+      <div class="grid">
+        <figure>
+          <img src="animals-1.jpg" alt="Deer in the oak grove" loading="lazy" data-full="animals-1.jpg"/>
+          <figcaption>Deer in the oak grove</figcaption>
+        </figure>
+        <figure>
+          <img src="animals-2.jpg" alt="Kingfisher over a clear pool" loading="lazy" data-full="animals-2.jpg"/>
+          <figcaption>Kingfisher over a clear pool</figcaption>
+        </figure>
+        <figure>
+          <img src="animals-3.jpg" alt="Fox on a misty path" loading="lazy" data-full="animals-3.jpg"/>
+          <figcaption>Fox on a misty path</figcaption>
+        </figure>
+        <figure>
+          <img src="animals-4.jpg" alt="Owls at twilight" loading="lazy" data-full="animals-4.jpg"/>
+          <figcaption>Owls at twilight</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Dragon sights -->
+    <section class="section" id="dragon-sights">
+      <h2>Dragon Sights</h2>
+      <p class="muted">Subtle, distant, and respectful views. These are symbolic and taken from public viewpoints.</p>
+      <div class="grid">
+        <figure>
+          <img src="iskra-1.jpg" alt="Iskra — distant flight above forest" loading="lazy" data-full="iskra-1.jpg"/>
+          <figcaption>Iskra — distant flight</figcaption>
+        </figure>
+        <figure>
+          <img src="zar-1.jpg" alt="Żar above snowy ridge" loading="lazy" data-full="zar-1.jpg"/>
+          <figcaption>Żar over a snowy ridge</figcaption>
+        </figure>
+        <figure>
+          <img src="mira-1.jpg" alt="Mira rising from the reeds" loading="lazy" data-full="mira-1.jpg"/>
+          <figcaption>Mira rising from reeds</figcaption>
+        </figure>
+        <figure>
+          <img src="mira-footprint.jpg" alt="Large footprint in the mud with scale" loading="lazy" data-full="mira-footprint.jpg"/>
+          <figcaption>Evidence — footprint</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox dialog -->
+  <dialog id="lightbox" aria-label="Image viewer">
+    <div class="lb-head">
+      <div id="lb-caption">Photo</div>
+      <button class="lb-close" onclick="document.getElementById('lightbox').close()">Close ✕</button>
+    </div>
+    <div class="lb-body">
+      <img id="lb-img" alt="Large view" />
+    </div>
+  </dialog>
+
+  <script>
+    // Simple lightbox: click any gallery image to open it large
+    const dlg = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lb-img');
+    const lbCap = document.getElementById('lb-caption');
+
+    document.querySelectorAll('figure img').forEach(img => {
+      img.addEventListener('click', () => {
+        lbImg.src = img.getAttribute('data-full') || img.src;
+        lbImg.alt = img.alt || 'Photo';
+        lbCap.textContent = img.alt || 'Photo';
+        dlg.showModal();
+      });
+    });
+
+    // Close on backdrop click (esc is handled by dialog natively)
+    dlg.addEventListener('click', (e) => {
+      const rect = dlg.getBoundingClientRect();
+      const inDialog = (
+        rect.top <= e.clientY && e.clientY <= rect.top + rect.height &&
+        rect.left <= e.clientX && e.clientX <= rect.left + rect.width
+      );
+      if (!inDialog) dlg.close();
+    });
+  </script>
+</body>
+</html>
