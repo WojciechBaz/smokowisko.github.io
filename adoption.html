@@ -2,82 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adoption Program - Smokowisko National Dragon Park</title>
-  <meta name="description" content="Adopt a dragon virtually and become a patron of Smokowisko National Dragon Park." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Adoption Program — Smokowisko National Dragon Park</title>
+  <meta name="description" content="Become a virtual patron of a Smokowisko dragon and support conservation, research, and education."/>
   <style>
     :root { color-scheme: light; }
     * { box-sizing: border-box; }
-    body { font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; margin:0; background:#f5f7f6; color:#1d1f1e; line-height:1.6; }
+    body { font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif; margin:0; background:#f5f7f6; color:#1d1f1e; line-height:1.65; }
 
-    /* Topbar (matches main site) */
-    .topbar { position: sticky; top: 0; width: 100%; z-index: 50; background: rgba(0,30,18,0.85); color:#fff; }
-    .topbar-inner { max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:.75rem 1rem; }
+    /* Topbar */
+    .topbar { position: sticky; top:0; z-index:50; background:rgba(0,30,18,.85); color:#fff; }
+    .topbar-inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:.75rem 1rem; }
     .brand { display:flex; align-items:center; gap:.6rem; font-weight:700; }
     .brand svg { width:28px; height:28px; }
     .nav { display:flex; flex-wrap:wrap; gap:.5rem; }
     .nav a { color:#fff; text-decoration:none; padding:.5rem .75rem; border-radius:8px; }
     .nav a:hover { background:rgba(255,255,255,.12); }
 
-    /* Hero banner */
-    .hero {
-      background: linear-gradient(rgba(0,30,18,0.6), rgba(0,30,18,0.6)), url('background.jpg') center/cover no-repeat;
-      color: #fff;
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-    .hero h1 {
-      margin: 0 0 1rem;
-      font-size: 2rem;
-    }
-    .hero-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 1rem;
-    }
-    .hero-buttons a {
-      background: #0e6b3b;
-      color: #fff;
-      padding: 0.75rem 1.25rem;
-      border-radius: 8px;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .hero-buttons a:hover {
-      background: #0b5a31;
-    }
+    /* Hero */
+    .hero { background: linear-gradient(rgba(0,30,18,.62), rgba(0,30,18,.62)), url('background.jpg') center/cover no-repeat; color:#fff; text-align:center; padding:3rem 1rem; }
+    .hero h1 { margin:0 0 .4rem; font-size:clamp(1.9rem,4.5vw,3rem); }
 
-    /* Page container & card */
-    .container { max-width:1000px; margin:2rem auto; padding:0 1rem; }
-    .card { background:#fff; border-radius:14px; box-shadow:0 8px 28px rgba(0,0,0,.12); padding:2rem; }
+    /* Layout */
+    .container { max-width: 950px; margin:2rem auto; padding:0 1rem; }
+    .card { background:#fff; border-radius:14px; box-shadow:0 8px 28px rgba(0,0,0,.12); padding:1.5rem; margin-bottom:1.25rem; }
     h2 { color:#0b4a2b; margin-top:0; }
+    h3 { color:#0b4a2b; margin:.5rem 0; }
+    .muted { color:#4b5b55; }
+    .note { background:#f0f7f2; border:1px solid #d8e9dd; border-radius:10px; padding:1rem; }
 
     /* Form */
-    form { margin-top:1.25rem; display:grid; gap:1rem; }
-    label { font-weight:600; }
-    input, textarea, select {
-      padding:.6rem .7rem; border:1px solid #cfd6d3; border-radius:8px; font-size:1rem; width:100%;
+    form { display:grid; gap:.8rem; }
+    label { font-weight:600; color:#254f3a; }
+    input[type="text"], input[type="email"], input[type="number"], select, textarea {
+      width:100%; padding:.6rem .7rem; border:1px solid #cfe1d6; border-radius:10px; background:#f9fcfa;
     }
-    small.help { color:#4c5a55; display:block; margin-top:.25rem; }
-    button { background:#0e6b3b; color:#fff; padding:.7rem 1.1rem; border:none; border-radius:10px; font-weight:700; cursor:pointer; }
-    button:hover { background:#0b5a31; }
+    textarea { min-height:120px; }
+    .row { display:grid; gap:.8rem; }
+    @media (min-width:700px){ .row.two { grid-template-columns:1fr 1fr; } }
 
-    .note { background:#f0f7f2; border:1px solid #d8e9dd; padding:1rem; border-radius:10px; }
-    .list { padding-left:1.1rem; }
+    .btn { display:inline-block; background:#0e6b3b; color:#fff; text-decoration:none; padding:.7rem 1rem; border-radius:10px; font-weight:700; border:none; cursor:pointer; }
+    .btn:hover { background:#0b5a31; }
+    .btn.outline { background:transparent; color:#0e6b3b; border:2px solid #0e6b3b; }
+    .btn.whats { background:#25D366; color:#073a20; }
+    .small { font-size:.92rem; }
+
+    /* Footer */
+    footer { background:#032f1b; color:#fff; text-align:center; padding:1.6rem 1rem; }
   </style>
 </head>
 <body>
   <!-- Topbar -->
-  <header class="topbar" role="banner">
+  <header class="topbar">
     <div class="topbar-inner">
-      <div class="brand" aria-label="Smokowisko brand">
+      <div class="brand">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="white" d="M12 2l3 5 6 .9-4.2 4 1 5.9L12 15l-5.8 2.8 1-5.9L3 7.9 9 7z"/></svg>
         <span>Smokowisko National Dragon Park</span>
       </div>
-      <nav class="nav" aria-label="Primary">
+      <nav class="nav">
         <a href="index.html">Home</a>
+        <a href="dragons.html">Meet Our Dragons</a>
         <a href="gallery.html">Picture Gallery</a>
         <a href="visit.html">Plan Your Visit</a>
         <a href="staff.html">Meet Our Staff</a>
@@ -85,101 +69,156 @@
     </div>
   </header>
 
-  <!-- Hero banner -->
+  <!-- Hero -->
   <section class="hero">
-    <h1>Become a Patron of Our Dragons</h1>
-    <p>Support conservation and join a tradition of guardianship dating back to 1893.</p>
-    <div class="hero-buttons">
-      <a href="dragons.html">Meet Our Dragons</a>
-      <a href="gallery.html">Picture Gallery</a>
-    </div>
+    <h1>Our Adoption Program</h1>
+    <p class="muted" style="margin:0 auto; max-width:65ch;">Virtual adoption lets you become a patron of Smokowisko’s dragons—funding habitat protection, research and education.</p>
   </section>
 
   <main class="container">
-    <article class="card">
+    <!-- Program intro -->
+    <section class="card">
+      <h2>How It Works</h2>
       <p>
-        To sustain the Park’s statutory mission, the Park Directors and our devoted
-        <strong>Custodians</strong>—the rangers, educators, and researchers who care for Smokowisko every day—
-        have created a way for friends of nature to help directly: the <strong>virtual adoption</strong> of one of our
-        dragons. Becoming a Patron means your gift supports habitat protection, research, food and veterinary
-        care, and education programs that inspire future guardians.
+        To strengthen funding for conservation under the Park’s charter, the Custodians and staff opened a <strong>virtual adoption</strong>
+        program. Patrons symbolically adopt a monitored dragon (e.g., Iskra, Żar, or Mira) and receive seasonal updates, photos, and
+        invitations to learning events. Adoptions are open to patrons aged <strong>8–100</strong> (under 18s require a legal guardian).
       </p>
-
       <p>
-        Patronage has deep roots here. In <strong>1894</strong>, Countess <em>Elżbieta Dąbrowska</em> endowed the first
-        “quiet grove” to shield nesting sites. That same year, composer <em>Aleksander Siennicki</em> pledged proceeds
-        from a charity concert series to restore a flight corridor, while explorer <em>Jan Franciszek Orłowski</em>
-        supplied alpine herbs for convalescing drakes. In modern times, organizations such as the
-        <em>Polish Nature Alliance</em>, the <em>Green Future Foundation</em>, and the
-        <em>International Conservation Trust</em> have all contributed to Smokowisko’s patron fund—help that lets
-        us protect dragons where they truly belong: in the wild.
+        We especially encourage qualities like <strong>bravery</strong>, <strong>kindness</strong>, <strong>curiosity</strong>, <strong>patience</strong>,
+        and <strong>respect for nature</strong>. Dragon knowledge helps—but a good heart matters most.
       </p>
-
-      <h2>Who Can Become a Patron?</h2>
-      <div class="note">
-        <ul class="list">
-          <li><strong>Age:</strong> 8–100. Younger applicants are welcome with consent of a legal guardian.</li>
-          <li><strong>Spirit:</strong> Patrons strive to be <em>brave</em>, <em>kind</em>, <em>curious</em>, and <em>wise</em>—good
-              examples for dragons and people alike.</li>
-          <li><strong>Nature of adoption:</strong> Symbolic & virtual. No dragon is relocated; your support
-              funds conservation and research, and you receive updates about your adopted dragon.</li>
-        </ul>
+      <div class="note small">
+        <strong>Reminder:</strong> Park access is limited to marked viewpoints and trails. Dragon encounters are never guaranteed; we observe from a distance to keep them safe.
       </div>
+      <p style="margin-top:.8rem"><a class="btn outline" href="dragons.html#profiles">Meet dragons available for adoption</a></p>
+    </section>
 
-      <h2>Meet Our Dragons</h2>
-      <p>
-        Before choosing your future dragon companion, you might like to learn more about them.
-        Visit our <a href="dragons.html">Meet Our Dragons</a> page to see their portraits,
-        read about their personalities, and discover which one might be your perfect match.
-      </p>
+    <!-- Application form -->
+    <section class="card">
+      <h2>Adoption Application</h2>
+      <form id="adoptionForm" autocomplete="on">
+        <div class="row two">
+          <div>
+            <label for="fullName">Full name</label>
+            <input id="fullName" name="Full name" type="text" required />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="Email" type="email" required />
+          </div>
+        </div>
 
-      <h2>About the Patron Application</h2>
-      <p>
-        Please complete the form below. This application is for the person willing to adopt a dragon virtually.
-        After submission you’ll be taken to a confirmation page with a generated application number.
-      </p>
-
-      <!-- Submit redirects to confirmation.html with a random app number -->
-      <form onsubmit="event.preventDefault(); const num=Math.floor(Math.random()*90000)+10000; window.location.href=`confirmation.html?app=${num}`;">
-        <div>
-          <label for="name">Full Name</label>
-          <input id="name" name="name" type="text" required />
+        <div class="row two">
+          <div>
+            <label for="age">Age</label>
+            <input id="age" name="Age" type="number" min="8" max="100" required />
+            <div class="small muted">Applicants under 18 must add a guardian below.</div>
+          </div>
+          <div>
+            <label for="dragon">Which dragon are you applying to patron?</label>
+            <select id="dragon" name="Chosen dragon" required>
+              <option value="" selected disabled>Choose a dragon…</option>
+              <option>Iskra (Draconis sylvanus)</option>
+              <option>Żar (Draconis montanus)</option>
+              <option>Mira (Draconis aureomista)</option>
+              <option>Undecided – assign me</option>
+            </select>
+          </div>
         </div>
 
         <div>
-          <label for="age">Age</label>
-          <input id="age" name="age" type="number" min="8" max="100" required />
-          <small class="help">Applicants under 18 must have consent from a legal guardian.</small>
+          <label for="motivation">Your motivation (2–5 sentences)</label>
+          <textarea id="motivation" name="Motivation" placeholder="Why would you be a good patron? What qualities or knowledge do you bring?" required></textarea>
         </div>
 
-        <div>
-          <label for="email">Email Address</label>
-          <input id="email" name="email" type="email" required />
+        <div class="row two">
+          <div>
+            <label for="guardian">Guardian name (if under 18)</label>
+            <input id="guardian" name="Guardian (if under 18)" type="text" />
+          </div>
+          <div>
+            <label for="guardianEmail">Guardian email (if under 18)</label>
+            <input id="guardianEmail" name="Guardian email (if under 18)" type="email" />
+          </div>
         </div>
 
-        <div>
-          <label for="dragon">Choose Your Dragon</label>
-          <select id="dragon" name="dragon">
-            <option>Iskra — Young Polish Forest Dragon</option>
-            <option>Żar — Mountain Ember Dragon</option>
-            <option>Mira — Golden Mist Dragon</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="qualities">Why do you want to be a Dragon Patron?</label>
-          <textarea id="qualities" name="qualities" rows="4" placeholder="Tell us about your brave, kind, and curious qualities…" required></textarea>
-        </div>
-
-        <button type="submit">Submit Application</button>
+        <button class="btn" type="submit">Submit Application</button>
       </form>
-    </article>
+
+      <p class="small muted" style="margin-top:.75rem;">
+        By submitting you agree that your details may be used to process your adoption and to contact you with Park updates. We never share your data outside the Park.
+      </p>
+    </section>
+
+    <!-- New: Video requirement -->
+    <section class="card" id="video-requirement">
+      <h2>Required: Application Video</h2>
+      <p>
+        After submitting the form, please record a short <strong>application video</strong> telling us why you should be chosen as a dragon patron.
+        Share it via the <strong>Smokowisko WhatsApp channel</strong> (button below).
+      </p>
+
+      <h3>What to include</h3>
+      <ul>
+        <li><strong>Introduce yourself</strong> (first name is enough; add age if you like).</li>
+        <li><strong>Why you?</strong> Tell us about qualities that fit a patron: brave, kind, smart, curious, patient, respectful of wildlife.</li>
+        <li><strong>Dragon knowledge:</strong> one or two facts you learned (species, behavior, safety rules).</li>
+        <li><strong>Your promise:</strong> how you’ll help protect dragons and follow Park rules.</li>
+      </ul>
+
+      <h3>Technical guidelines</h3>
+      <ul class="small">
+        <li>Length: <strong>60–120 seconds</strong>. Shoot horizontally if possible.</li>
+        <li>Title the video: <code>Smokowisko_Adoption_[YourName]_[ChosenDragon].mp4</code></li>
+        <li>For applicants under 18: record with a guardian’s consent, and have your guardian appear or confirm at the end.</li>
+      </ul>
+
+      <!-- WhatsApp button: replace the href with your real channel or number -->
+      <p style="margin:.6rem 0 0;">
+        <a class="btn whats" href="YOUR_WHATSAPP_LINK_HERE" target="_blank" rel="noopener">Share via WhatsApp</a>
+        <span class="small muted" style="margin-left:.5rem;">(Replace the link with your official Smokowisko channel)</span>
+      </p>
+
+      <p class="small muted" style="margin-top:.6rem;">
+        Prefer email? Send the video link to <a href="mailto:smokowisko.park@gmail.com">smokowisko.park@gmail.com</a>.
+      </p>
+    </section>
   </main>
 
   <footer>
-    <p style="text-align:center; background:#032f1b; color:#fff; padding:1.75rem 1rem;">
-      &copy; 2025 Smokowisko National Dragon Park. All rights reserved.
-    </p>
+    <p>&copy; 2025 Smokowisko National Dragon Park. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Keep your no-backend flow: download a .txt receipt and redirect to confirmation with an ID
+    const form = document.getElementById('adoptionForm');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const fd = new FormData(form);
+      const lines = [];
+      fd.forEach((v,k)=>lines.push(`${k}: ${v}`));
+
+      const when = new Date().toISOString();
+      const id = 'SNDP-' + Math.random().toString(36).slice(2, 8).toUpperCase();
+      lines.unshift(`Application ID: ${id}`);
+      lines.push(`Submitted at: ${when}`);
+
+      // download a local copy for the applicant
+      const blob = new Blob([lines.join('\\n')], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `Smokowisko-adoption-${id}.txt`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+
+      // redirect to confirmation page
+      window.location.href = `adoption-submitted.html?id=${encodeURIComponent(id)}`;
+    });
+  </script>
 </body>
 </html>
