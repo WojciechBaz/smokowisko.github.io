@@ -50,11 +50,12 @@
     .tags { display:flex; gap:.4rem; flex-wrap:wrap; margin-top:.35rem; }
     .tag { background:#e8f3ec; border:1px solid #cfe6d8; color:#11452b; padding:.2rem .5rem; border-radius:999px; font-size:.85rem; font-weight:600; }
 
-    .gallery { display:grid; gap:.5rem; grid-template-columns: repeat(3, 1fr); margin-top:.75rem; }
-    .gallery img { width:100%; display:block; border-radius:10px; height: 140px; object-fit: cover; }
+    .gallery { display:grid; gap:.6rem; grid-template-columns: repeat(3, 1fr); margin-top:.75rem; }
+    .gallery a { display:block; border-radius:10px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,.08); }
+    .gallery img { width:100%; display:block; height: 180px; object-fit: cover; }
     @media (max-width: 640px) { .gallery { grid-template-columns: 1fr; } .gallery img { height:auto; } }
 
-    .kv { display:grid; grid-template-columns: 150px 1fr; gap:.5rem 1rem; margin:.75rem 0; }
+    .kv { display:grid; grid-template-columns: 170px 1fr; gap:.5rem 1rem; margin:.75rem 0; }
     .kv div { padding:.25rem 0; }
 
     .cta { margin-top:.75rem; }
@@ -89,33 +90,35 @@
   </section>
 
   <main class="container">
+    <!-- SEGMENT 1: SPECIES -->
     <article class="card segment" id="species">
       <h2>Species & Classification</h2>
       <p>
-        Poland’s dragon lore stretches from medieval sagas to the modern field journals of Smokowisko rangers. In conservation terms, we use
-        a practical classification that groups dragons by <em>habitat</em>, <em>physiology</em>, and <em>behavior</em>. Seven
-        confirmed species are recognized within Poland, with three seen regularly in the Smokowisko Forest Reserve. The Park emblem—
-        the <strong><em>Draconis sylvanus</em></strong> (Polish Forest Dragon)—is the most frequently observed and
-        the best-studied.
+        Poland’s dragon lore stretches from medieval sagas to the modern field journals of Smokowisko rangers. For conservation and education,
+        we use a practical classification that groups dragons by <em>habitat</em>, <em>physiology</em>, and <em>behavior</em>. Seven confirmed
+        species are recognized within Poland, with three seen regularly in the Smokowisko Forest Reserve. The Park emblem—
+        the <strong><em>Draconis sylvanus</em></strong> (Polish Forest Dragon)—is the most frequently observed and the best‑studied.
       </p>
 
-      <div class="fact"><strong>Quick sizes (adults):</strong> small 3–5 m • medium 6–8 m • large 9–12 m (snout to tail). Wingspans are typically 1.5× body length.</div>
+      <div class="fact"><strong>Mythic lifespan:</strong> Many dragons are recorded in folklore as living from <strong>1 to 100,000 years</strong>. Field science suggests much shorter
+        biological lifespans; however, long periods of torpor, slow growth, and generational memory in family lines may explain the legends.</div>
+      <div class="fact" style="margin-top:.7rem"><strong>Quick sizes (adults):</strong> small 3–5 m • medium 6–8 m • large 9–12 m (snout to tail). Wingspans ≈ 1.5× body length.</div>
 
       <h3>1) <em>Draconis sylvanus</em> — Polish Forest Dragon (common)</h3>
       <p>
-        Medium-sized woodland dragon of mixed oak–pine forests. Nests on crags and old quarry faces with morning updrafts.
-        Diet includes roe deer, wild boar piglets, hare, and seasonally large river fish. Scales: emerald to silver‑green for
-        canopy camouflage. A clear <em>whistle-call</em> (two-note) announces territory at dawn and dusk.
+        Medium‑sized woodland dragon of mixed oak–pine forests. Nests on crags and old quarry faces with morning updrafts.
+        Diet includes roe deer, wild boar piglets, hare, and seasonally large river fish. Scales: emerald to silver‑green for canopy camouflage.
+        A clear <em>two‑note whistle</em> announces territory at dawn and dusk.
       </p>
       <div class="grid cols-2">
         <div class="ul">
           <li><strong>Size:</strong> 6–8 m body; 12–14 m wingspan</li>
-          <li><strong>Lifespan:</strong> 70–90 years</li>
-          <li><strong>Breeding:</strong> Late April–May; 1–2 eggs; fledging by August</li>
-          <li><strong>Molt:</strong> Light annual molt; full plate molt every 5–7 years</li>
+          <li><strong>Mythic lifespan:</strong> 1–100,000 yrs; <em>observed</em>: 70–90 yrs</li>
+          <li><strong>Breeding:</strong> Late Apr–May; 1–2 eggs; fledging by Aug</li>
+          <li><strong>Molt:</strong> Light annual molt; full plate molt every 5–7 yrs</li>
         </div>
         <div class="ul">
-          <li><strong>Field signs:</strong> oval soot marks on perches, pearly scale sheddings near game trails</li>
+          <li><strong>Field signs:</strong> oval soot marks on perches; pearly scale sheddings near game trails</li>
           <li><strong>Flight style:</strong> soaring with tight woodland turns; uses thermal seams along ridges</li>
           <li><strong>Status:</strong> Stable, protected in all Polish reserves</li>
         </div>
@@ -129,7 +132,8 @@
       <div class="grid cols-2">
         <div class="ul">
           <li><strong>Size:</strong> 7–9 m; wings 13–15 m</li>
-          <li><strong>Diet:</strong> chamois, marmot, carrion in winter</li>
+          <li><strong>Mythic lifespan:</strong> 1–100,000 yrs; <em>observed</em>: 90–110 yrs</li>
+          <li><strong>Diet:</strong> chamois, marmot, winter carrion</li>
           <li><strong>Nests:</strong> cliff eyries above 1,800 m</li>
         </div>
         <div class="ul">
@@ -147,12 +151,14 @@
       <div class="grid cols-2">
         <div class="ul">
           <li><strong>Size:</strong> 5–7 m; wings 9–12 m</li>
+          <li><strong>Mythic lifespan:</strong> 1–100,000 yrs; <em>observed</em>: 60–80 yrs</li>
           <li><strong>Diet:</strong> large waterfowl, pike, carp</li>
           <li><strong>Nests:</strong> raised peat islets, heavily concealed</li>
         </div>
         <div class="ul">
           <li><strong>Field signs:</strong> shimmering residue on reeds; concentric water ripples after low passes</li>
           <li><strong>Status:</strong> Rare; strictly protected wetlands</li>
+          <li><strong>Behavior:</strong> shy; reacts to flute‑like tones</li>
         </div>
       </div>
 
@@ -164,29 +170,33 @@
       <div class="grid cols-2">
         <div class="ul">
           <li><strong>Size:</strong> 4–6 m; wings 7–10 m</li>
+          <li><strong>Mythic lifespan:</strong> 1–100,000 yrs; <em>observed</em>: 50–70 yrs</li>
           <li><strong>Diet:</strong> fox, badger, large corvids</li>
           <li><strong>Call:</strong> soft knocking clicks; ultrasonic squeaks (recorded)</li>
         </div>
         <div class="ul">
-          <li><strong>Field signs:</strong> silent feather drifts; claw scores on smooth bark</li>
+          <li><strong>Field signs:</strong> feather drifts; claw scores on smooth bark</li>
           <li><strong>Status:</strong> Data Deficient</li>
+          <li><strong>Behavior:</strong> strictly nocturnal; spooks easily at light</li>
         </div>
       </div>
 
       <h3>5) <em>Draconis flumineus</em> — River Drake</h3>
       <p>
-        Powerful swimmer favoring broad, slow rivers. Webbed hind talons and hydrophobic scale coating. Cooperates with sylvanus in
+        Powerful swimmer favoring broad, slow rivers. Webbed hind talons and hydrophobic scale coating. Cooperates with <em>sylvanus</em> in
         mixed territories; disputes are ritualized and rarely injurious.
       </p>
       <div class="grid cols-2">
         <div class="ul">
           <li><strong>Size:</strong> 6–7 m; wings 10–12 m</li>
+          <li><strong>Mythic lifespan:</strong> 1–100,000 yrs; <em>observed</em>: 65–85 yrs</li>
           <li><strong>Diet:</strong> catfish, salmonids, beaver (occasionally)</li>
           <li><strong>Nests:</strong> cutbank burrows reinforced with clay</li>
         </div>
         <div class="ul">
           <li><strong>Field signs:</strong> slide marks on muddy banks; fish scales in pellets</li>
           <li><strong>Status:</strong> Localized; stable where rivers are clean</li>
+          <li><strong>Behavior:</strong> tolerant of rain and fog; hunts at dusk</li>
         </div>
       </div>
 
@@ -198,35 +208,40 @@
       <div class="grid cols-2">
         <div class="ul">
           <li><strong>Size:</strong> 8–10 m; wings 14–16 m</li>
+          <li><strong>Mythic lifespan:</strong> 1–100,000 yrs; <em>observed</em>: 80–100 yrs</li>
           <li><strong>Diet:</strong> elk calves, carrion; caches food in frozen scree</li>
           <li><strong>Call:</strong> long glassy whistle</li>
         </div>
         <div class="ul">
           <li><strong>Field signs:</strong> rime‑scraped perches; cached bones in snow hollows</li>
           <li><strong>Status:</strong> Near Threatened (climate‑sensitive)</li>
+          <li><strong>Behavior:</strong> crepuscular in winter light</li>
         </div>
       </div>
 
       <h3>7) <em>Draconis ignifera</em> — Hearthscale</h3>
       <p>
-        Smallest Polish dragon; often shares edges of human habitation historically (source of many village tales). Emits controlled
-        warm breaths to incubate eggs. Coppery scales; exceptionally curious temperament.
+        Smallest Polish dragon; historically lived at the edges of villages (source of many barn‑yard tales). Emits controlled warm breaths to incubate eggs.
+        Coppery scales; exceptionally curious temperament.
       </p>
       <div class="grid cols-2">
         <div class="ul">
           <li><strong>Size:</strong> 3–4.5 m; wings 5–7 m</li>
+          <li><strong>Mythic lifespan:</strong> 1–100,000 yrs; <em>observed</em>: 40–60 yrs</li>
           <li><strong>Diet:</strong> rabbits, rodents, chicken (managed deterrence in buffer villages)</li>
-          <li><strong>Nests:</strong> hollow logs, abandoned sheds (historic); now nest boxes in buffers</li>
+          <li><strong>Nests:</strong> hollow logs; modern nest boxes in buffers</li>
         </div>
         <div class="ul">
           <li><strong>Field signs:</strong> neatly scorched straw; round roost prints near barns (historic records)</li>
           <li><strong>Status:</strong> Recovering in park buffers</li>
+          <li><strong>Behavior:</strong> human‑curious but skittish; best observed from hides</li>
         </div>
       </div>
 
       <div class="fact"><strong>Safety & Stewardship:</strong> The Park opens only marked viewpoints and trails. Core forest zones remain ranger‑only to protect dragons and visitors. Please respect quiet hours at dawn and dusk when dragons are most active.</div>
     </article>
 
+    <!-- SEGMENT 2: ADOPTABLE PROFILES -->
     <article class="card segment" id="profiles">
       <h2>Adoptable Dragon Profiles</h2>
       <p class="muted">These individuals are monitored by our Rangers. Adoptions are symbolic and help fund habitat care, research, and education.</p>
@@ -242,15 +257,15 @@
         <div class="kv">
           <div><strong>Age:</strong></div><div>~4 years (sub‑adult)</div>
           <div><strong>Wingspan:</strong></div><div>~9.5 m (growing)</div>
-          <div><strong>First sighting:</strong></div><div>Spotted by Ranger <em>Piotr Kowalski</em> near Green Lantern Station after a summer storm, following a trail of pearly scales.</div>
-          <div><strong>Temperament:</strong></div><div>Playful chases of swallows; responds to willow‑whistle calls.</div>
-          <div><strong>Markings:</strong></div><div>Silver‑green crescent behind left eye.</div>
-          <div><strong>Favorite foods:</strong></div><div>Cloudberries (seasonal), river trout, hare.</div>
+          <div><strong>Discovery:</strong></div><div>Spotted by Ranger <em>Piotr Kowalski</em> after a summer storm near Green Lantern Station; a trail of pearly scales led to a sheltered ledge.</div>
+          <div><strong>Temperament:</strong></div><div>Playfully chases swallows, responds to willow‑whistle calls; tolerant of distant observers at dawn.</div>
+          <div><strong>Health Notes:</strong></div><div>Minor wing‑edge scuffs healed naturally; excellent condition.</div>
+          <div><strong>Patron Updates:</strong></div><div>Quarterly photo notes and "first‑flight of the month" records when weather allows.</div>
         </div>
         <div class="gallery" aria-label="Iskra photo gallery">
-          <img src="iskra-1.jpg" alt="Iskra gliding over forest" />
-          <img src="iskra-2.jpg" alt="Close-up of Iskra’s silver-green scales" />
-          <img src="iskra-3.jpg" alt="Iskra perched on a crag at dawn" />
+          <a href="iskra-1.jpg" target="_blank"><img src="iskra-1.jpg" alt="Iskra gliding over forest" /></a>
+          <a href="iskra-2.jpg" target="_blank"><img src="iskra-2.jpg" alt="Close-up of Iskra’s silver-green scales" /></a>
+          <a href="iskra-3.jpg" target="_blank"><img src="iskra-3.jpg" alt="Iskra perched on a crag at dawn" /></a>
         </div>
         <div class="cta"><a class="btn" href="adoption.html">Adopt Iskra</a></div>
       </section>
@@ -266,15 +281,15 @@
         <div class="kv">
           <div><strong>Age:</strong></div><div>~12 years (adult)</div>
           <div><strong>Wingspan:</strong></div><div>~14 m</div>
-          <div><strong>First sighting:</strong></div><div>Documented by Dr. <em>Marta Zielińska</em> along a high ridge; faint ember plumes left scorched lichens under the perch.</div>
-          <div><strong>Temperament:</strong></div><div>Calm, vigilant; allows distant observation from approved cliff hide.</div>
-          <div><strong>Markings:</strong></div><div>Bronze plates with darker, heat‑retaining seams.</div>
-          <div><strong>Favorite foods:</strong></div><div>Marmot, chamois; winter carrion when storms are heavy.</div>
+          <div><strong>Discovery:</strong></div><div>Documented by Dr. <em>Marta Zielińska</em> along a high ridge; faint ember plumes left scorched lichens under the perch.</div>
+          <div><strong>Temperament:</strong></div><div>Calm and vigilant; accepts observation from approved cliff hide at 400 m distance.</div>
+          <div><strong>Health Notes:</strong></div><div>Cold‑weather specialist; thermal membranes inspected each autumn.</div>
+          <div><strong>Patron Updates:</strong></div><div>Seasonal ridge‑cam clips and wind‑pattern charts of Żar’s sunset flights.</div>
         </div>
         <div class="gallery" aria-label="Żar photo gallery">
-          <img src="zar-1.jpg" alt="Żar soaring above snow line" />
-          <img src="zar-2.jpg" alt="Bronze scales of Żar in evening light" />
-          <img src="zar-3.jpg" alt="Żar resting on a high ledge with mist" />
+          <a href="zar-1.jpg" target="_blank"><img src="zar-1.jpg" alt="Żar soaring above snow line" /></a>
+          <a href="zar-2.jpg" target="_blank"><img src="zar-2.jpg" alt="Bronze scales of Żar in evening light" /></a>
+          <a href="zar-3.jpg" target="_blank"><img src="zar-3.jpg" alt="Żar resting on a high ledge with mist" /></a>
         </div>
         <div class="cta"><a class="btn" href="adoption.html">Adopt Żar</a></div>
       </section>
@@ -290,22 +305,22 @@
         <div class="kv">
           <div><strong>Age:</strong></div><div>~7 years (adult)</div>
           <div><strong>Wingspan:</strong></div><div>~11 m</div>
-          <div><strong>First sighting:</strong></div><div>Found by Education Coordinator <em>Aneta Nowak</em> while setting up a dawn bird walk; shimmering vapor trails over reedbeds gave her away.</div>
-          <div><strong>Temperament:</strong></div><div>Quiet, responsive to soft flute tones; prefers open reed corridors.</div>
-          <div><strong>Markings:</strong></div><div>Subtle gold iridescence on neck plates.</div>
-          <div><strong>Favorite foods:</strong></div><div>Pike, carp, and—rare treat—ripe water chestnuts along levees.</div>
+          <div><strong>Discovery:</strong></div><div>Found by Education Coordinator <em>Aneta Nowak</em> at dawn; shimmering vapor trails over reedbeds revealed her route.</div>
+          <div><strong>Temperament:</strong></div><div>Quiet and observant; responds to soft flute tones during educational surveys.</div>
+          <div><strong>Health Notes:</strong></div><div>Wetland‑adapted; annual checks for reed‑cut abrasions after storms.</div>
+          <div><strong>Patron Updates:</strong></div><div>Water‑level diaries and mist‑plume observations during spring displays.</div>
         </div>
         <div class="gallery" aria-label="Mira photo gallery">
-          <img src="mira-1.jpg" alt="Mira rising above the reeds at dawn" />
-          <img src="mira-2.jpg" alt="Golden mist shimmer around Mira" />
-          <img src="mira-3.jpg" alt="Mira gliding low over still water" />
+          <a href="mira-1.jpg" target="_blank"><img src="mira-1.jpg" alt="Mira rising above the reeds at dawn" /></a>
+          <a href="mira-2.jpg" target="_blank"><img src="mira-2.jpg" alt="Golden mist shimmer around Mira" /></a>
+          <a href="mira-3.jpg" target="_blank"><img src="mira-3.jpg" alt="Mira gliding low over still water" /></a>
         </div>
         <div class="cta"><a class="btn" href="adoption.html">Adopt Mira</a></div>
       </section>
 
       <p class="muted" style="margin-top:1rem;">
         <strong>Image note:</strong> Place your photos in the same folder as this page and use the exact filenames shown above (e.g. <code>iskra-1.jpg</code>,
-        <code>zar-2.jpg</code>, <code>mira-3.jpg</code>). Filenames are case‑sensitive on GitHub Pages.
+        <code>zar-2.jpg</code>, <code>mira-3.jpg</code>). Filenames are case‑sensitive on GitHub Pages. Clicking a thumbnail opens the full photo in a new tab.
       </p>
     </article>
   </main>
